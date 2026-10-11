@@ -1,0 +1,44 @@
+[
+  {
+    "timestamp_utc": "2026-07-16T18:01:00Z",
+    "path": "data/NETCDF/flare_v7_14_20260716T1801.nc",
+    "bytes": 12152600,
+    "sha256": "ed286a631e36887af492189c80f2f9feba6acfb55543b27079b8cf71c382eaee",
+    "git_blob_sha": "6666a9280ed42866f8b1966d9ef05c15afc57151"
+  },
+  {
+    "timestamp_utc": "2026-07-16T18:06:00Z",
+    "path": "data/NETCDF/flare_v7_14_20260716T1806.nc",
+    "bytes": 12172257,
+    "sha256": "3db877e3f9fd9d732e5f0951c6c91c75edecd4f93daa0a348f7bc296131debbd",
+    "git_blob_sha": "a4caf1e76a5d01479a95be6f39fce8099b012d7a"
+  },
+  {
+    "timestamp_utc": "2026-07-16T18:11:00Z",
+    "path": "data/NETCDF/flare_v7_14_20260716T1811.nc",
+    "bytes": 12151868,
+    "sha256": "83121d4a7e1e7749b9f77c7410177b4038191ada278b9fba2d4d85622fbf9825",
+    "git_blob_sha": "3e4fe9b5ee3273475bfd53445120367fcbde73c4"
+  },
+  {
+    "timestamp_utc": "2026-07-16T18:16:00Z",
+    "path": "data/NETCDF/flare_v7_14_20260716T1816.nc",
+    "bytes": 12143403,
+    "sha256": "c0fe3bb1650ce3a0bc24436f859d13b5bf82668dd328012e18d8b4f920429b78",
+    "git_blob_sha": "073dd04152dd65e59c7145e26a2fa9b44243b571"
+  },
+  {
+    "timestamp_utc": "2026-07-16T18:21:00Z",
+    "path": "data/NETCDF/flare_v7_14_20260716T1821.nc",
+    "bytes": 12140655,
+    "sha256": "746a67b77b52077b38201359a2bd8356f7a0461ef3b0788341717d2e977cfe39",
+    "git_blob_sha": "cfe5d7d7f8122acb592ae8210cb6c88af3db8dbd"
+  },
+  {
+    "timestamp_utc": "2026-07-16T18:26:00Z",
+    "path": "data/NETCDF/flare_v7_14_20260716T1826.nc",
+    "bytes": 12121568,
+    "sha256": "476c3f7f32349fcce69985dd153e92c203629f6950f4fa27ab748ba93b1b021c",
+    "git_blob_sha": "b011d001de806236970ecb0486d9858c4f434cd5"
+  }
+]

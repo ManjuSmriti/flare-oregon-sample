@@ -2,8 +2,8 @@
 
 Developed by **BRIDGE Research and Policy Foundation** and **ARTH GEO Intelligence**.
 
-25 experimental scenes for July 16, 2026: **17:41–18:41** and **19:21–20:16 UTC**,
-at five-minute intervals. The gap is intentional. Each scene contains 545 × 1,425
+Six public experimental scenes for July 16, 2026: **18:01–18:26 UTC inclusive**,
+at five-minute intervals. Each scene contains 545 × 1,425
 native pixels. The curved footprint spans approximately 43.453–45.734°N and
 124.198–118.469°W; these extrema describe the footprint, not a rectangular mask.
 
@@ -13,21 +13,30 @@ Repository: [ManjuSmriti/flare-oregon-sample](https://github.com/ManjuSmriti/fla
 
 ## Get the data
 
-Data publication is being prepared. No GitHub release URL or Zenodo DOI has yet been
-assigned. Download the relevant archives when available and extract them into
-`data/` in this repository. Alternatively, set `FLARE_DATA_DIR` to the existing
-folder containing `Zarr/`, `NETCDF/`, and/or `Tiles/`.
+The six self-contained NetCDF files are included in `data/NETCDF/`.
+Clone this repository or use **Code → Download ZIP** to get the examples and data
+together. You can also download individual scenes below (no extraction needed).
+Save individual downloads under `data/NETCDF/` when using these examples.
 
-| Download | Contents |
+| July 16 UTC | Individual NetCDF download |
 |---|---|
-| flare-v7.14-oregon-zarr.zip | All 25 scientific scenes, Zarr v2 |
-| flare-v7.14-oregon-netcdf.zip | Same values, 25 NetCDF4 files |
-| flare-v7.14-oregon-tiles.zip | Indexed map tiles and local comparison viewer |
+| 18:01 | [Download](https://raw.githubusercontent.com/ManjuSmriti/flare-oregon-sample/main/data/NETCDF/flare_v7_14_20260716T1801.nc) |
+| 18:06 | [Download](https://raw.githubusercontent.com/ManjuSmriti/flare-oregon-sample/main/data/NETCDF/flare_v7_14_20260716T1806.nc) |
+| 18:11 | [Download](https://raw.githubusercontent.com/ManjuSmriti/flare-oregon-sample/main/data/NETCDF/flare_v7_14_20260716T1811.nc) |
+| 18:16 | [Download](https://raw.githubusercontent.com/ManjuSmriti/flare-oregon-sample/main/data/NETCDF/flare_v7_14_20260716T1816.nc) |
+| 18:21 | [Download](https://raw.githubusercontent.com/ManjuSmriti/flare-oregon-sample/main/data/NETCDF/flare_v7_14_20260716T1821.nc) |
+| 18:26 | [Download](https://raw.githubusercontent.com/ManjuSmriti/flare-oregon-sample/main/data/NETCDF/flare_v7_14_20260716T1826.nc) |
 
-Each archive includes the supplied README and validation metadata. Release
-`SHA256SUMS.txt` verifies the download archives; the original per-file manifest
-is included separately. Zarr and NetCDF preserve full source precision. Tiles
-round brightness temperatures to whole kelvin and FireScore to whole numbers.
+Total data size is approximately **72.9 MB** (about 12.1 MB per scene).
+[Manifest](data/manifest.json) lists timestamps, exact sizes, and checksums;
+[SHA256SUMS](data/SHA256SUMS.txt) verifies the six files from inside `data/`.
+NetCDF files preserve full source precision.
+
+The full 25-scene collection (17:41–18:41 and 19:21–20:16 UTC, with a gap)
+is intended for a **separate restricted Zenodo record**, with access by request.
+Its DOI and request-access link are pending. The remaining 19 scenes, full Zarr
+collection, and tile collection are not included in this public repository.
+Setting an access restriction on Zenodo does not restrict these public copies.
 
 ## Run the examples
 
@@ -54,14 +63,17 @@ automation. All timestamps are UTC. Figures go to `outputs/`.
 Python users can also run:
 
 ```sh
-python examples/flare_sample.py --data ./data --tag 20260716T1741 --output outputs
+python examples/flare_sample.py --data ./data --format netcdf --tag 20260716T1801 --output outputs
 ```
 
-For the original three-source viewer, extract all three archives into the
+For approved users of the separate full dataset's three-source viewer, extract all three archives into the
 same data folder and run `python data/Tiles/serve.py`, then visit
 `http://127.0.0.1:8774/`. This Python server must run locally or on a suitable
 host; GitHub Pages cannot execute it. Basemaps and browser mapping libraries
 require internet. Static scientific plots work offline.
+
+Notebooks default to the included NetCDF sample. For an approved full download,
+set `FLARE_DATA_DIR` to its parent data folder and change `FORMAT` to `zarr` if needed.
 
 ## Variables and interpretation
 

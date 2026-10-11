@@ -1,4 +1,9 @@
-data/
+data/*
+!data/NETCDF/
+data/NETCDF/*
+!data/NETCDF/flare_v7_14_20260716T18[012][16].nc
+!data/manifest.json
+!data/SHA256SUMS.txt
 outputs/
 .venv/
 __pycache__/

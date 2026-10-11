@@ -101,7 +101,7 @@ if __name__ == '__main__':
     import argparse
     import matplotlib.pyplot as plt
     p=argparse.ArgumentParser(description=__doc__)
-    p.add_argument('--data');p.add_argument('--format',choices=['zarr','netcdf'],default='zarr')
+    p.add_argument('--data');p.add_argument('--format',choices=['zarr','netcdf'],default='netcdf')
     p.add_argument('--tag');p.add_argument('--output',default='outputs')
     a=p.parse_args();root=data_root(a.data);tag=a.tag or scenes(root,a.format)[0]
     out=Path(a.output);out.mkdir(parents=True,exist_ok=True)
