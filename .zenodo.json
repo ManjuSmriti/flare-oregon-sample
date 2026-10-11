@@ -1,18 +1,23 @@
 {
-  "title": "FLARE v7.14 Oregon public demonstration sample, July 16, 2026, 18:01\u201318:26 UTC",
+  "title": "FLARE v7.14 Oregon public demonstration sample, July 16, 2026, 18:01–18:26 UTC",
   "upload_type": "dataset",
-  "description": "Public demonstration subset: six experimental native-grid scenes for July 16, 2026, 18:01\u201318:26 UTC inclusive, at five-minute intervals. NetCDF4 preserves source values on a 545 by 1425 grid. Includes Python/Jupyter examples. The separate full 25-scene dataset is intended for restricted Zenodo access and is not included here. Reconstructed values are not direct VIIRS observations. Radiance physical units remain unverified. FireScore is not a probability.",
+  "description": "Public demonstration subset: six experimental native-grid scenes for July 16, 2026, 18:01–18:26 UTC inclusive, at five-minute intervals. NetCDF4 preserves source values on a 545 by 1425 grid. Includes Python/Jupyter examples. The full 25-scene dataset is published separately with restricted files at https://doi.org/10.5281/zenodo.23304444; the remaining 19 scenes are not included here. This metadata describes the public GitHub subset, not the restricted Zenodo record. Reconstructed values are not direct VIIRS observations. Radiance physical units remain unverified. FireScore is not a probability.",
   "creators": [
     {
-      "name": "BRIDGE Research and Policy Foundation"
-    },
-    {
-      "name": "ARTH GEO Intelligence"
+      "name": "Smriti, Manju",
+      "affiliation": "BRIDGE Research and Policy Foundation; ARTH GEO Intelligence"
     }
   ],
   "access_right": "open",
   "license": "cc-by-nc-nd-4.0",
   "version": "7.14-sample.1",
+  "related_identifiers": [
+    {
+      "identifier": "10.5281/zenodo.23304444",
+      "relation": "isPartOf",
+      "scheme": "doi"
+    }
+  ],
   "keywords": [
     "FLARE",
     "Oregon",

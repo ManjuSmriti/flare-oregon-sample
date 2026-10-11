@@ -1,0 +1,22 @@
+cff-version: 1.2.0
+message: "Please cite the full Zenodo dataset below. For the public subset, also report the six July 16 scenes at 18:01–18:26 UTC and the GitHub commit used."
+type: dataset
+title: "FLARE v7.14 Oregon public demonstration sample and examples"
+authors:
+  - family-names: "Smriti"
+    given-names: "Manju"
+repository-code: "https://github.com/ManjuSmriti/flare-oregon-sample"
+url: "https://github.com/ManjuSmriti/flare-oregon-sample"
+preferred-citation:
+  type: data
+  title: "FLARE v7.14 Oregon sample: reconstructed spectral imagery, temperatures, FireScore and atmospheric state, July 16, 2026"
+  authors:
+    - family-names: "Smriti"
+      given-names: "Manju"
+  year: 2026
+  date-released: "2026-10-11"
+  version: "7.14"
+  doi: "10.5281/zenodo.23304444"
+  url: "https://zenodo.org/records/23304444"
+  publisher:
+    name: "Zenodo"
