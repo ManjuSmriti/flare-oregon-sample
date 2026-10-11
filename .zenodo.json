@@ -1,0 +1,26 @@
+{
+  "title": "FLARE v7.14 Oregon sample: reconstructed spectral imagery, temperatures, FireScore and atmospheric state, July 16, 2026",
+  "upload_type": "dataset",
+  "description": "25 experimental native-grid scenes for July 16, 2026, 17:41\u201318:41 and 19:21\u201320:16 UTC. Zarr v2 and NetCDF4 preserve source values on a 545 by 1425 grid. Indexed XYZ tiles provide a sampled Web Mercator representation. Includes Python/Jupyter examples. Reconstructed values are not direct VIIRS observations. Radiance physical units remain unverified. FireScore is not a probability.",
+  "creators": [
+    {
+      "name": "BRIDGE Research and Policy Foundation"
+    },
+    {
+      "name": "ARTH GEO Intelligence"
+    }
+  ],
+  "access_right": "open",
+  "license": "cc-by-nc-nd-4.0",
+  "version": "7.14-sample.1",
+  "keywords": [
+    "FLARE",
+    "Oregon",
+    "wildfire",
+    "remote sensing",
+    "FireScore",
+    "Zarr",
+    "NetCDF",
+    "experimental"
+  ]
+}

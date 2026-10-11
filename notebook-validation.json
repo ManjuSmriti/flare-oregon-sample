@@ -1,0 +1,17 @@
+[
+  {
+    "notebook": "01_open_and_validate.ipynb",
+    "code_cells": 4,
+    "status": "passed"
+  },
+  {
+    "notebook": "02_false_rgb_and_maps.ipynb",
+    "code_cells": 4,
+    "status": "passed"
+  },
+  {
+    "notebook": "03_pixel_time_series.ipynb",
+    "code_cells": 3,
+    "status": "passed"
+  }
+]
