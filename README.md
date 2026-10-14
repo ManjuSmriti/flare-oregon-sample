@@ -1,5 +1,21 @@
 # FLARE Oregon sample — FireScore v7.14
 
+## FLARE Outlook daily forecasts
+
+This repository also contains [FLARE Outlook v11](outlook/README.md) for **July 3–21, 2026**, alongside the original Oregon sample below. The Outlook package contains 19 full western-domain daily forecasts with `outlook_index`, `category`, `lat`, and `lon` on the native 5792 × 6672 grid.
+
+Preview the executed notebooks directly on GitHub:
+
+- [Open data and inspect metadata](outlook/notebooks/01_open_and_check.ipynb)
+- [Geographic maps](outlook/notebooks/02_geographic_maps.ipynb)
+- [Daily forecast series at a selected location](outlook/notebooks/03_daily_point_series.ipynb)
+
+![FLARE Outlook index and category for July 3, 2026](outlook/preview/outlook_20260703.png)
+
+The notebook outputs are included for browsing without running Python. The 19 compressed NetCDF files total **1.90 GB**; their separate Release upload is pending. See the [Outlook guide](outlook/README.md) for the file inventory, setup and license. The Zenodo DOI below identifies the Oregon sample, not the Outlook dataset.
+
+## Original Oregon sample
+
 [![Dataset DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23304444.svg)](https://doi.org/10.5281/zenodo.23304444)
 
 Developed by **BRIDGE Research and Policy Foundation** and **ARTH GEO Intelligence**.

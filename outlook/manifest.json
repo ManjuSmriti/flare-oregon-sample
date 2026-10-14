@@ -1,0 +1,572 @@
+{
+  "title": "FLARE Outlook v11 July 3 to 21 2026",
+  "intended_github_owner": "ManjuSmriti",
+  "repository": "ManjuSmriti/flare-oregon-sample",
+  "repository_directory": "outlook",
+  "uploaded": false,
+  "shape": [
+    5792,
+    6672
+  ],
+  "variables": [
+    "outlook_index",
+    "category",
+    "lat",
+    "lon"
+  ],
+  "files": [
+    {
+      "date": "2026-07-03",
+      "file": "data/FLARE_Outlook_v11_20260703T0300Z.nc",
+      "issue": "2026-07-03T03:00:00Z",
+      "valid_start": "2026-07-03T12:00:00Z",
+      "valid_end": "2026-07-04T12:00:00Z",
+      "bytes": 100034704,
+      "sha256": "817e8f7e3d54a2f779a43bc6867b47658c5989ffdb7080aef27f58c54d3e34cb",
+      "source_run": "full_west_20260703_v11_eightday_20260920_run2",
+      "source_manifest_sha256": "ec179aa663e684c745cd2352a4c879ed1cd386f049314e29d0fc780fad8e1351",
+      "source_results_sha256": "040b253a7f54dac92c9a1a9fdd708a3c5732fb2ba37dafb29871675c0045284b",
+      "processing_created": "2026-09-20T18:52:55.401274+00:00",
+      "verification": {
+        "outlook_index": "all pixels equal to source, including NaN positions",
+        "category": "all pixels equal to source, including NaN positions",
+        "lat": "all pixels equal to source, including NaN positions",
+        "lon": "all pixels equal to source, including NaN positions"
+      },
+      "compression": {
+        "zlib": true,
+        "complevel": 9,
+        "shuffle": true,
+        "chunksizes": [
+          512,
+          512
+        ]
+      },
+      "recompression_verified": "all four retained arrays have identical compressed chunks to previously source-verified arrays"
+    },
+    {
+      "date": "2026-07-04",
+      "file": "data/FLARE_Outlook_v11_20260704T0300Z.nc",
+      "issue": "2026-07-04T03:00:00Z",
+      "valid_start": "2026-07-04T12:00:00Z",
+      "valid_end": "2026-07-05T12:00:00Z",
+      "bytes": 99795283,
+      "sha256": "09951ba572105c1748aaf147cb19f36882c493e2c76a2571e73356b316fdad43",
+      "source_run": "full_west_20260704_v11_continuation_20260923",
+      "source_manifest_sha256": "40e1c1971864b2b7016a4a570ec9df7e5f7863d94832eded5ebb0c7992289a41",
+      "source_results_sha256": "4c92c06a9afc5d2d672c8939344ba51d0a745513888b05d8a71d9ee9dab50a71",
+      "processing_created": "2026-09-23T14:25:29.208618+00:00",
+      "verification": {
+        "outlook_index": "all pixels equal to source, including NaN positions",
+        "category": "all pixels equal to source, including NaN positions",
+        "lat": "all pixels equal to source, including NaN positions",
+        "lon": "all pixels equal to source, including NaN positions"
+      },
+      "compression": {
+        "zlib": true,
+        "complevel": 9,
+        "shuffle": true,
+        "chunksizes": [
+          512,
+          512
+        ]
+      },
+      "recompression_verified": "all four retained arrays have identical compressed chunks to previously source-verified arrays"
+    },
+    {
+      "date": "2026-07-05",
+      "file": "data/FLARE_Outlook_v11_20260705T0300Z.nc",
+      "issue": "2026-07-05T03:00:00Z",
+      "valid_start": "2026-07-05T12:00:00Z",
+      "valid_end": "2026-07-06T12:00:00Z",
+      "bytes": 100030685,
+      "sha256": "5c8db2c8a9f5d73df4c63dfd4055e490f550802846d282c5e342696c186ee7c8",
+      "source_run": "full_west_20260705_v11_continuation_20260923",
+      "source_manifest_sha256": "7fe6ab8345af03e3a131d85bae05a80ae290dc790a133678035f13e79f6c4186",
+      "source_results_sha256": "8ec01cd1b931a261709c450f65b3406827cdd1e60ccc7f8714363ffc11bb1075",
+      "processing_created": "2026-09-23T18:25:47.255287+00:00",
+      "verification": {
+        "outlook_index": "all pixels equal to source, including NaN positions",
+        "category": "all pixels equal to source, including NaN positions",
+        "lat": "all pixels equal to source, including NaN positions",
+        "lon": "all pixels equal to source, including NaN positions"
+      },
+      "compression": {
+        "zlib": true,
+        "complevel": 9,
+        "shuffle": true,
+        "chunksizes": [
+          512,
+          512
+        ]
+      },
+      "recompression_verified": "all four retained arrays have identical compressed chunks to previously source-verified arrays"
+    },
+    {
+      "date": "2026-07-06",
+      "file": "data/FLARE_Outlook_v11_20260706T0300Z.nc",
+      "issue": "2026-07-06T03:00:00Z",
+      "valid_start": "2026-07-06T12:00:00Z",
+      "valid_end": "2026-07-07T12:00:00Z",
+      "bytes": 100576568,
+      "sha256": "bd5bef25b9e7565257622132fe465094bec655bb9ef45f3eda63f6ef93c0561f",
+      "source_run": "full_west_20260706_v11_continuation_20260923",
+      "source_manifest_sha256": "2ee58a13736976fd9b510cdef41e6afab1bd2463c564b84ec502efbec0942ec7",
+      "source_results_sha256": "54d9d9596cca0a1d795a103ff0d451447769ca0264ed96abfaddbae0cd531746",
+      "processing_created": "2026-09-23T19:27:45.335273+00:00",
+      "verification": {
+        "outlook_index": "all pixels equal to source, including NaN positions",
+        "category": "all pixels equal to source, including NaN positions",
+        "lat": "all pixels equal to source, including NaN positions",
+        "lon": "all pixels equal to source, including NaN positions"
+      },
+      "compression": {
+        "zlib": true,
+        "complevel": 9,
+        "shuffle": true,
+        "chunksizes": [
+          512,
+          512
+        ]
+      },
+      "recompression_verified": "all four retained arrays have identical compressed chunks to previously source-verified arrays"
+    },
+    {
+      "date": "2026-07-07",
+      "file": "data/FLARE_Outlook_v11_20260707T0300Z.nc",
+      "issue": "2026-07-07T03:00:00Z",
+      "valid_start": "2026-07-07T12:00:00Z",
+      "valid_end": "2026-07-08T12:00:00Z",
+      "bytes": 100622652,
+      "sha256": "c38d1ae5eb2d6b43c638daaf8418ca9167b6211d27595e203da3d82e6f841ce5",
+      "source_run": "full_west_20260707_v11_continuation_20260923",
+      "source_manifest_sha256": "38a3f0197293dbecc3a3c0c2dcc4f18faf801ab5026cd65d03cc01b27a75310d",
+      "source_results_sha256": "13c223b0fe206d81358148816e10c29a6007095efb6f8ccc99c639780c3e5865",
+      "processing_created": "2026-09-23T21:17:55.367503+00:00",
+      "verification": {
+        "outlook_index": "all pixels equal to source, including NaN positions",
+        "category": "all pixels equal to source, including NaN positions",
+        "lat": "all pixels equal to source, including NaN positions",
+        "lon": "all pixels equal to source, including NaN positions"
+      },
+      "compression": {
+        "zlib": true,
+        "complevel": 9,
+        "shuffle": true,
+        "chunksizes": [
+          512,
+          512
+        ]
+      },
+      "recompression_verified": "all four retained arrays have identical compressed chunks to previously source-verified arrays"
+    },
+    {
+      "date": "2026-07-08",
+      "file": "data/FLARE_Outlook_v11_20260708T0300Z.nc",
+      "issue": "2026-07-08T03:00:00Z",
+      "valid_start": "2026-07-08T12:00:00Z",
+      "valid_end": "2026-07-09T12:00:00Z",
+      "bytes": 100727272,
+      "sha256": "6ebba040f1d49ff832484330aab8f0599e0919eff3d183bc7dfb53288e3626aa",
+      "source_run": "full_west_20260708_v11_continuation_20260923",
+      "source_manifest_sha256": "4ffd1d7243d2a6f9122c2c512b7472a1e926d5403a55fdf935564286e3014328",
+      "source_results_sha256": "ed3de4db1cdba2ed99a6f52aee8dc8b116bf03ad7740278b25b28eacedb6d27c",
+      "processing_created": "2026-09-23T23:27:04.302790+00:00",
+      "verification": {
+        "outlook_index": "all pixels equal to source, including NaN positions",
+        "category": "all pixels equal to source, including NaN positions",
+        "lat": "all pixels equal to source, including NaN positions",
+        "lon": "all pixels equal to source, including NaN positions"
+      },
+      "compression": {
+        "zlib": true,
+        "complevel": 9,
+        "shuffle": true,
+        "chunksizes": [
+          512,
+          512
+        ]
+      },
+      "recompression_verified": "all four retained arrays have identical compressed chunks to previously source-verified arrays"
+    },
+    {
+      "date": "2026-07-09",
+      "file": "data/FLARE_Outlook_v11_20260709T0300Z.nc",
+      "issue": "2026-07-09T03:00:00Z",
+      "valid_start": "2026-07-09T12:00:00Z",
+      "valid_end": "2026-07-10T12:00:00Z",
+      "bytes": 100372545,
+      "sha256": "ab3baebb88f4e29728e2ca08fc26a8f234cd67cbdf731ba43d3392f0b29650db",
+      "source_run": "full_west_20260709_v11_continuation_20260923",
+      "source_manifest_sha256": "7be1420ffa04de0049e7d97a8a847823f08d3c6cf8fe072342144c90c9b1c580",
+      "source_results_sha256": "cf9006b64d0e49a583914ce3a90b49f086c787994ae896399e95311dc473dc0a",
+      "processing_created": "2026-09-27T15:06:26.165136+00:00",
+      "verification": {
+        "outlook_index": "all pixels equal to source, including NaN positions",
+        "category": "all pixels equal to source, including NaN positions",
+        "lat": "all pixels equal to source, including NaN positions",
+        "lon": "all pixels equal to source, including NaN positions"
+      },
+      "compression": {
+        "zlib": true,
+        "complevel": 9,
+        "shuffle": true,
+        "chunksizes": [
+          512,
+          512
+        ]
+      },
+      "recompression_verified": "all four retained arrays have identical compressed chunks to previously source-verified arrays"
+    },
+    {
+      "date": "2026-07-10",
+      "file": "data/FLARE_Outlook_v11_20260710T0300Z.nc",
+      "issue": "2026-07-10T03:00:00Z",
+      "valid_start": "2026-07-10T12:00:00Z",
+      "valid_end": "2026-07-11T12:00:00Z",
+      "bytes": 99487941,
+      "sha256": "bd8d3a46fa58cc2ad5a30743d2173f6bcdf543da4ef32a1baef530bcc0930eea",
+      "source_run": "full_west_20260710_v11_continuation_20260923",
+      "source_manifest_sha256": "75681f2506210a1bd63a06bae0e23a33b803a7b8d0ef0b1f13a0f81e99c16cf3",
+      "source_results_sha256": "15641223b1af1c5571ab639130e3d369b0023cd2434b20ab09a183ec5b659e50",
+      "processing_created": "2026-09-27T17:43:47.580948+00:00",
+      "verification": {
+        "outlook_index": "all pixels equal to source, including NaN positions",
+        "category": "all pixels equal to source, including NaN positions",
+        "lat": "all pixels equal to source, including NaN positions",
+        "lon": "all pixels equal to source, including NaN positions"
+      },
+      "compression": {
+        "zlib": true,
+        "complevel": 9,
+        "shuffle": true,
+        "chunksizes": [
+          512,
+          512
+        ]
+      },
+      "recompression_verified": "all four retained arrays have identical compressed chunks to previously source-verified arrays"
+    },
+    {
+      "date": "2026-07-11",
+      "file": "data/FLARE_Outlook_v11_20260711T0300Z.nc",
+      "issue": "2026-07-11T03:00:00Z",
+      "valid_start": "2026-07-11T12:00:00Z",
+      "valid_end": "2026-07-12T12:00:00Z",
+      "bytes": 99022744,
+      "sha256": "be2f21e17a1c3e506edb326dcd3c334bef7391a89c7604ebed56a461f5d8d83f",
+      "source_run": "full_west_20260711_v11_continuation_20260923",
+      "source_manifest_sha256": "eb9f75d0c2700a2f89340ee5c46e599f491f488bd235b8b475c64b4af23b963e",
+      "source_results_sha256": "0d0ba911f2c1e18cda7038d602189d1e74cabb440b920e3c5262b2f9f9f558e4",
+      "processing_created": "2026-09-28T02:33:36.062725+00:00",
+      "verification": {
+        "outlook_index": "all pixels equal to source, including NaN positions",
+        "category": "all pixels equal to source, including NaN positions",
+        "lat": "all pixels equal to source, including NaN positions",
+        "lon": "all pixels equal to source, including NaN positions"
+      },
+      "compression": {
+        "zlib": true,
+        "complevel": 9,
+        "shuffle": true,
+        "chunksizes": [
+          512,
+          512
+        ]
+      },
+      "recompression_verified": "all four retained arrays have identical compressed chunks to previously source-verified arrays"
+    },
+    {
+      "date": "2026-07-12",
+      "file": "data/FLARE_Outlook_v11_20260712T0300Z.nc",
+      "issue": "2026-07-12T03:00:00Z",
+      "valid_start": "2026-07-12T12:00:00Z",
+      "valid_end": "2026-07-13T12:00:00Z",
+      "bytes": 99046580,
+      "sha256": "4395f3841657dc2b3d9438e717727f61f82aff9b05ddf76ff4689bc0588a3150",
+      "source_run": "full_west_20260712_v11_continuation_20260923",
+      "source_manifest_sha256": "d8db89b21ba88fe1e7a4461fbc50ac6e8896df460e3fa474c15d71f77e2f5b51",
+      "source_results_sha256": "ac6f16eacecdf7376a5951adcb78abc28e391315a760a7aaecf25920ba475d6d",
+      "processing_created": "2026-09-28T05:13:51.325276+00:00",
+      "verification": {
+        "outlook_index": "all pixels equal to source, including NaN positions",
+        "category": "all pixels equal to source, including NaN positions",
+        "lat": "all pixels equal to source, including NaN positions",
+        "lon": "all pixels equal to source, including NaN positions"
+      },
+      "compression": {
+        "zlib": true,
+        "complevel": 9,
+        "shuffle": true,
+        "chunksizes": [
+          512,
+          512
+        ]
+      },
+      "recompression_verified": "all four retained arrays have identical compressed chunks to previously source-verified arrays"
+    },
+    {
+      "date": "2026-07-13",
+      "file": "data/FLARE_Outlook_v11_20260713T0300Z.nc",
+      "issue": "2026-07-13T03:00:00Z",
+      "valid_start": "2026-07-13T12:00:00Z",
+      "valid_end": "2026-07-14T12:00:00Z",
+      "bytes": 99324436,
+      "sha256": "1f33cfc39bec39fa3b82927e20e719094bc8229564951912193b3d1cf4de461e",
+      "source_run": "full_west_20260713_v11_continuation_20260923",
+      "source_manifest_sha256": "b84927e4984205162009b64c753e6afee5505dd397ca0c296c37d8b602b5ef3a",
+      "source_results_sha256": "2080ae20bcbe0261892f16f9157fe82e92516e68f88b7aafc0a320aecd69d91f",
+      "processing_created": "2026-09-28T07:51:20.062270+00:00",
+      "verification": {
+        "outlook_index": "all pixels equal to source, including NaN positions",
+        "category": "all pixels equal to source, including NaN positions",
+        "lat": "all pixels equal to source, including NaN positions",
+        "lon": "all pixels equal to source, including NaN positions"
+      },
+      "compression": {
+        "zlib": true,
+        "complevel": 9,
+        "shuffle": true,
+        "chunksizes": [
+          512,
+          512
+        ]
+      },
+      "recompression_verified": "all four retained arrays have identical compressed chunks to previously source-verified arrays"
+    },
+    {
+      "date": "2026-07-14",
+      "file": "data/FLARE_Outlook_v11_20260714T0300Z.nc",
+      "issue": "2026-07-14T03:00:00Z",
+      "valid_start": "2026-07-14T12:00:00Z",
+      "valid_end": "2026-07-15T12:00:00Z",
+      "bytes": 100503575,
+      "sha256": "95a32ca490a99b227bbd37edf0f59eccfbf06088e2fdd9ab0542c8fcddc97dc7",
+      "source_run": "full_west_20260714_v11_continuation_20260923",
+      "source_manifest_sha256": "177dce382403735eee7306ea24de1e69898cc50d09f24ac6de0b637f4b0952b8",
+      "source_results_sha256": "5ca9a4f16084dc68db577938791f998a881f6ba4d0026ef2119a495b3fc40967",
+      "processing_created": "2026-09-28T10:32:57.077463+00:00",
+      "verification": {
+        "outlook_index": "all pixels equal to source, including NaN positions",
+        "category": "all pixels equal to source, including NaN positions",
+        "lat": "all pixels equal to source, including NaN positions",
+        "lon": "all pixels equal to source, including NaN positions"
+      },
+      "compression": {
+        "zlib": true,
+        "complevel": 9,
+        "shuffle": true,
+        "chunksizes": [
+          512,
+          512
+        ]
+      },
+      "recompression_verified": "all four retained arrays have identical compressed chunks to previously source-verified arrays"
+    },
+    {
+      "date": "2026-07-15",
+      "file": "data/FLARE_Outlook_v11_20260715T0300Z.nc",
+      "issue": "2026-07-15T03:00:00Z",
+      "valid_start": "2026-07-15T12:00:00Z",
+      "valid_end": "2026-07-16T12:00:00Z",
+      "bytes": 100572208,
+      "sha256": "a1cad2ea86185976dcc4ee1a3fd8ec37c5195349207ea0b7053cf3c66234793f",
+      "source_run": "full_west_20260715_v11_continuation_20260923",
+      "source_manifest_sha256": "2153f36edbf6880635110d07799a5c86d2605969a2f2a7e2e8a900cb73208914",
+      "source_results_sha256": "4d4b64e5ca6178b4006c3acee40e06777b600580f6fad21f42a5ba2e53d864e1",
+      "processing_created": "2026-09-28T14:24:25.928234+00:00",
+      "verification": {
+        "outlook_index": "all pixels equal to source, including NaN positions",
+        "category": "all pixels equal to source, including NaN positions",
+        "lat": "all pixels equal to source, including NaN positions",
+        "lon": "all pixels equal to source, including NaN positions"
+      },
+      "compression": {
+        "zlib": true,
+        "complevel": 9,
+        "shuffle": true,
+        "chunksizes": [
+          512,
+          512
+        ]
+      },
+      "recompression_verified": "all four retained arrays have identical compressed chunks to previously source-verified arrays"
+    },
+    {
+      "date": "2026-07-16",
+      "file": "data/FLARE_Outlook_v11_20260716T0300Z.nc",
+      "issue": "2026-07-16T03:00:00Z",
+      "valid_start": "2026-07-16T12:00:00Z",
+      "valid_end": "2026-07-17T12:00:00Z",
+      "bytes": 100334726,
+      "sha256": "be95726d584198deb179da1dcf72342fa530fdfa6a636ab071d631e730b81221",
+      "source_run": "full_west_20260716_v11_continuation_20260923",
+      "source_manifest_sha256": "b0814339f27bbfdd04c48eb85abf3fae34206f396305fba682d6a578a158ddef",
+      "source_results_sha256": "5ed284efe26385832dbbe8685b90a590a0a9299467adb55d7b51616ef0bd0f98",
+      "processing_created": "2026-09-28T18:00:30.609887+00:00",
+      "verification": {
+        "outlook_index": "all pixels equal to source, including NaN positions",
+        "category": "all pixels equal to source, including NaN positions",
+        "lat": "all pixels equal to source, including NaN positions",
+        "lon": "all pixels equal to source, including NaN positions"
+      },
+      "compression": {
+        "zlib": true,
+        "complevel": 9,
+        "shuffle": true,
+        "chunksizes": [
+          512,
+          512
+        ]
+      },
+      "recompression_verified": "all four retained arrays have identical compressed chunks to previously source-verified arrays"
+    },
+    {
+      "date": "2026-07-17",
+      "file": "data/FLARE_Outlook_v11_20260717T0300Z.nc",
+      "issue": "2026-07-17T03:00:00Z",
+      "valid_start": "2026-07-17T12:00:00Z",
+      "valid_end": "2026-07-18T12:00:00Z",
+      "bytes": 100717679,
+      "sha256": "75364a22450846230db376df1f42a7bf3b2ee5a4f9a97abc27e3d84f7725caaa",
+      "source_run": "full_west_20260717_v11_continuation_20260923",
+      "source_manifest_sha256": "efc613b6fd5a917f6d880ad69fd7891694f3351c9eb57c95880c6bcd8bc78fb1",
+      "source_results_sha256": "ffe520fa9c1406fc587ab16681bb58bd6f6cb703c8a8717858192a4bcf50b0c1",
+      "processing_created": "2026-09-28T20:42:41.547387+00:00",
+      "verification": {
+        "outlook_index": "all pixels equal to source, including NaN positions",
+        "category": "all pixels equal to source, including NaN positions",
+        "lat": "all pixels equal to source, including NaN positions",
+        "lon": "all pixels equal to source, including NaN positions"
+      },
+      "compression": {
+        "zlib": true,
+        "complevel": 9,
+        "shuffle": true,
+        "chunksizes": [
+          512,
+          512
+        ]
+      },
+      "recompression_verified": "all four retained arrays have identical compressed chunks to previously source-verified arrays"
+    },
+    {
+      "date": "2026-07-18",
+      "file": "data/FLARE_Outlook_v11_20260718T0300Z.nc",
+      "issue": "2026-07-18T03:00:00Z",
+      "valid_start": "2026-07-18T12:00:00Z",
+      "valid_end": "2026-07-19T12:00:00Z",
+      "bytes": 100593731,
+      "sha256": "b1984ada4c304d6461a7e77fa87195c8b0bae47e8a2564ca502c43e8eed55b1b",
+      "source_run": "full_west_20260718_v11_continuation_20260923",
+      "source_manifest_sha256": "73cb9591727e0185ee3022755573127e4a206660260f029a9daf1ab86597e704",
+      "source_results_sha256": "0975e89aa866d9156afbefda9d7a6218aeb96a0cf274ee11bb7c3a783bfd8183",
+      "processing_created": "2026-09-29T01:35:47.808467+00:00",
+      "verification": {
+        "outlook_index": "all pixels equal to source, including NaN positions",
+        "category": "all pixels equal to source, including NaN positions",
+        "lat": "all pixels equal to source, including NaN positions",
+        "lon": "all pixels equal to source, including NaN positions"
+      },
+      "compression": {
+        "zlib": true,
+        "complevel": 9,
+        "shuffle": true,
+        "chunksizes": [
+          512,
+          512
+        ]
+      },
+      "recompression_verified": "all four retained arrays have identical compressed chunks to previously source-verified arrays"
+    },
+    {
+      "date": "2026-07-19",
+      "file": "data/FLARE_Outlook_v11_20260719T0300Z.nc",
+      "issue": "2026-07-19T03:00:00Z",
+      "valid_start": "2026-07-19T12:00:00Z",
+      "valid_end": "2026-07-20T12:00:00Z",
+      "bytes": 100432302,
+      "sha256": "2796e60a69df6c2a10678ad9b4e32d5566d959105c1089442ee1ab800a51b1d0",
+      "source_run": "full_west_20260719_v11_continuation_20260923",
+      "source_manifest_sha256": "222493986c8a98897922c1e41c3cd928daa49d955a7c324005b6755d4c9135bb",
+      "source_results_sha256": "32abb2ea3044e3c5d6e8dc6eacf0b9f9ba74994571dee97fde36642ae04fa981",
+      "processing_created": "2026-09-29T04:38:22.934252+00:00",
+      "verification": {
+        "outlook_index": "all pixels equal to source, including NaN positions",
+        "category": "all pixels equal to source, including NaN positions",
+        "lat": "all pixels equal to source, including NaN positions",
+        "lon": "all pixels equal to source, including NaN positions"
+      },
+      "compression": {
+        "zlib": true,
+        "complevel": 9,
+        "shuffle": true,
+        "chunksizes": [
+          512,
+          512
+        ]
+      },
+      "recompression_verified": "all four retained arrays have identical compressed chunks to previously source-verified arrays"
+    },
+    {
+      "date": "2026-07-20",
+      "file": "data/FLARE_Outlook_v11_20260720T0300Z.nc",
+      "issue": "2026-07-20T03:00:00Z",
+      "valid_start": "2026-07-20T12:00:00Z",
+      "valid_end": "2026-07-21T12:00:00Z",
+      "bytes": 100292647,
+      "sha256": "324724846e40e37842779f628457e46559af68097928d390dfac811815f01ee9",
+      "source_run": "full_west_20260720_v11_continuation_20260923",
+      "source_manifest_sha256": "4f1640e8c89bb0320bb66df966890ce44380d4071385b45ebcfa9998b9668c2b",
+      "source_results_sha256": "ec7286b4969b2726e4b9c3dab942fa8857273df59c474951a673c5029891652d",
+      "processing_created": "2026-09-29T07:17:23.385655+00:00",
+      "verification": {
+        "outlook_index": "all pixels equal to source, including NaN positions",
+        "category": "all pixels equal to source, including NaN positions",
+        "lat": "all pixels equal to source, including NaN positions",
+        "lon": "all pixels equal to source, including NaN positions"
+      },
+      "compression": {
+        "zlib": true,
+        "complevel": 9,
+        "shuffle": true,
+        "chunksizes": [
+          512,
+          512
+        ]
+      },
+      "recompression_verified": "all four retained arrays have identical compressed chunks to previously source-verified arrays"
+    },
+    {
+      "date": "2026-07-21",
+      "file": "data/FLARE_Outlook_v11_20260721T0300Z.nc",
+      "issue": "2026-07-21T03:00:00Z",
+      "valid_start": "2026-07-21T12:00:00Z",
+      "valid_end": "2026-07-22T12:00:00Z",
+      "bytes": 99800756,
+      "sha256": "5e91b0e776667767a5ef590837220df79027fb867b06f6f023c3da311ad09db0",
+      "source_run": "full_west_20260721_v11_task1_20261001",
+      "source_manifest_sha256": "876402a12156beccac06e1ca7dd79eeb7c7b03cddb515f19ab719a6783dc7bd4",
+      "source_results_sha256": "c51da85c054aeade3ce4e24cacf7235f2f40a395e40a31128f813678e7b4e1ab",
+      "processing_created": "2026-10-01T13:05:15.520992+00:00",
+      "verification": {
+        "outlook_index": "all pixels equal to source, including NaN positions",
+        "category": "all pixels equal to source, including NaN positions",
+        "lat": "all pixels equal to source, including NaN positions",
+        "lon": "all pixels equal to source, including NaN positions"
+      },
+      "compression": {
+        "zlib": true,
+        "complevel": 9,
+        "shuffle": true,
+        "chunksizes": [
+          512,
+          512
+        ]
+      },
+      "recompression_verified": "all four retained arrays have identical compressed chunks to previously source-verified arrays"
+    }
+  ],
+  "total_bytes": 1902289034,
+  "license": "CC-BY-NC-ND-4.0"
+}

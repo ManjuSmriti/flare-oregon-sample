@@ -1,0 +1,9 @@
+# Daily downloads belong in release assets, not Git history.
+data/*.nc
+data/*.partial
+data/*.recompressed
+.venv/
+__pycache__/
+.ipynb_checkpoints/
+*.pyc
+user_outputs/

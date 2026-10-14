@@ -1,0 +1,27 @@
+{
+  "executed": true,
+  "executed_at": "2026-10-14T03:59:41.509828+00:00",
+  "results": [
+    {
+      "notebook": "01_open_and_check.ipynb",
+      "status": "passed",
+      "code_cells": 4,
+      "embedded_figures": 0,
+      "outputs_saved": true
+    },
+    {
+      "notebook": "02_geographic_maps.ipynb",
+      "status": "passed",
+      "code_cells": 4,
+      "embedded_figures": 2,
+      "outputs_saved": true
+    },
+    {
+      "notebook": "03_daily_point_series.ipynb",
+      "status": "passed",
+      "code_cells": 3,
+      "embedded_figures": 1,
+      "outputs_saved": true
+    }
+  ]
+}

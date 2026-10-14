@@ -1,0 +1,15 @@
+FLARE Outlook v11 dataset
+Creator: Manju Smriti
+BRIDGE - Research and Policy Foundation; ARTH GEO Intelligence
+
+Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International
+SPDX identifier: CC-BY-NC-ND-4.0
+
+The dataset is provided under the terms of this license:
+https://creativecommons.org/licenses/by-nc-nd/4.0/
+
+Full legal code:
+https://creativecommons.org/licenses/by-nc-nd/4.0/legalcode.en
+
+Bundled Natural Earth basemap boundaries are public domain and are not
+covered by the dataset license.
