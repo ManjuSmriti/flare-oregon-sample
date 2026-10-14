@@ -2,7 +2,7 @@
 
 ## FLARE Outlook daily forecasts
 
-This repository also contains [FLARE Outlook v11](outlook/README.md) for **July 3–21, 2026**, alongside the Oregon sample below. The Outlook package contains 19 full western-domain daily forecasts with `outlook_index`, `category`, `lat`, and `lon` on the native 5792 × 6672 grid.
+This repository contains [FLARE Outlook v11](outlook/README.md) for **July 15–19, 2026**, alongside the Oregon sample below. The Outlook package contains 5 full western-domain daily forecasts with `outlook_index`, `category`, `lat`, and `lon` on the native 5792 × 6672 grid.
 
 Preview the executed notebooks directly on GitHub:
 
