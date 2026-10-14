@@ -2,7 +2,7 @@
 
 ## FLARE Outlook daily forecasts
 
-This repository also contains [FLARE Outlook v11](outlook/README.md) for **July 3–21, 2026**, alongside the original Oregon sample below. The Outlook package contains 19 full western-domain daily forecasts with `outlook_index`, `category`, `lat`, and `lon` on the native 5792 × 6672 grid.
+This repository also contains [FLARE Outlook v11](outlook/README.md) for **July 3–21, 2026**, alongside the Oregon sample below. The Outlook package contains 19 full western-domain daily forecasts with `outlook_index`, `category`, `lat`, and `lon` on the native 5792 × 6672 grid.
 
 Preview the executed notebooks directly on GitHub:
 
@@ -12,15 +12,15 @@ Preview the executed notebooks directly on GitHub:
 
 ![FLARE Outlook index and category for July 3, 2026](outlook/preview/outlook_20260703.png)
 
-The notebook outputs are included for browsing without running Python. The 19 compressed NetCDF files total **1.90 GB**; their separate Release upload is pending. See the [Outlook guide](outlook/README.md) for the file inventory, setup and license. The Zenodo DOI below identifies the Oregon sample, not the Outlook dataset.
+See the [Outlook guide](outlook/README.md) for the file inventory, setup and license. The Zenodo DOI below identifies the Oregon sample, not the Outlook dataset.
 
-## Original Oregon sample
+## Oregon sample
 
 [![Dataset DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23304444.svg)](https://doi.org/10.5281/zenodo.23304444)
 
 Developed by **BRIDGE Research and Policy Foundation** and **ARTH GEO Intelligence**.
 
-Six public experimental scenes for July 16, 2026: **18:01–18:26 UTC inclusive**,
+Six public scenes for July 16, 2026: **18:01–18:26 UTC inclusive**,
 at five-minute intervals. Each scene contains 545 × 1,425
 native pixels. The curved footprint spans approximately 43.453–45.734°N and
 124.198–118.469°W; these extrema describe the footprint, not a rectangular mask.
@@ -52,11 +52,9 @@ NetCDF files preserve full source precision.
 
 The full 25-scene collection (17:41–18:41 and 19:21–20:16 UTC, with a gap)
 is published as a **[restricted Zenodo dataset](https://zenodo.org/records/23304444)**.
-Visit the record to request access if the request form is enabled; otherwise
-contact the record owner. GitHub access does not grant access to restricted files.
-The remaining 19 scenes, full Zarr
-collection, and tile collection are not included in this public repository.
-Setting an access restriction on Zenodo does not restrict these public copies.
+Visit the record 
+To request access contact the record owner. GitHub access does not grant access to restricted files.
+
 
 ## Dataset record and citation
 
@@ -75,8 +73,6 @@ When using the public sample, also state that you used the six 18:01–18:26 UTC
 scenes and record the GitHub commit used for the examples. Machine-readable
 citation information is provided in [CITATION.cff](CITATION.cff).
 
-The Zenodo version field is **7.14**; its description also contains the package
-label **7.14-sample.1**. The citation follows the published version field.
 
 ## Run the examples
 
@@ -120,33 +116,19 @@ set `FLARE_DATA_DIR` to its parent data folder and change `FORMAT` to `zarr` if 
 `I01`–`I05`, `BT04`, `BT05`, `lat`, `lon`, `FireScore`,
 `ObservationConfidence`, `AtmosphereState`, and scalar `time`.
 
-- I01–I05 and temperatures are reconstructed/inferred, not direct VIIRS measurements.
-- Radiance physical units remain unverified; the examples do not infer units or convert to reflectance.
-- BT04 and BT05 are in kelvin. FireScore is an experimental 0–100 engineering score, not a probability.
-- ObservationConfidence describes observation quality, not confidence that fire exists.
+- I01–I05 and temperatures are reconstructed, not direct VIIRS measurements.
+- BT04 and BT05 are in kelvin. FireScore is an 0–100 score, not a probability.
+- ObservationConfidence describes observation quality.
 - Floating NaN is unavailable. Valid score zero and categorical zero are retained.
 - Atmospheric codes: 0 unknown, 1 clear, 2 cloud, 3 smoke, 4 conflict, 5 unresolved.
 - Quality codes: 0 missing, 1 obscured/unreliable/water, 2 cloud/edge risk,
   3 usable with uncertain atmosphere, 4 clear.
 
 False RGB uses I03/I02/I01 in R/G/B, with fixed 0–0.6 stretch and gamma 2.2,
-matching this package's viewer. It differs from the earlier percentile-stretched
-cover image. Native two-dimensional latitude/longitude are used for geographic
+matching this package's viewer. Native two-dimensional latitude/longitude are used for geographic
 plots. Web overlays are resampled to Web Mercator before placing on a basemap.
 
-## Validation and licensing
-
-The pre-release audit checked 6,482 original file checksums, exact equality of
-all Zarr/NetCDF scenes, source crop alignment for all 25 scenes, and 10,300
-numeric tiles against the bundled lookup. Tile temperature/score rounding errors
-are at most 0.5; categories match exactly.
+## Licensing
 
 Data and documentation: **CC BY-NC-ND 4.0**, see `LICENSE`.
-**Metadata discrepancy (checked October 11, 2026):** Zenodo's structured license
-field currently lists **CC BY 4.0**, while its description states **CC BY-NC-ND 4.0**.
-This inconsistency needs clarification from the record owner. Linking the DOI here
-does not change this repository's license, and this note does not resolve the
-conflicting Zenodo terms.
-Examples and notebooks use the same requested license. CC licenses are not
-usually recommended for software; a separate software license can be selected
-by the owners before publication. No additional data rights are implied.
+Examples and notebooks use the same license. 
