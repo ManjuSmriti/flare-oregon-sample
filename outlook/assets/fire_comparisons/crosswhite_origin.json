@@ -1,0 +1,11 @@
+{
+  "incident": "Crosswhite",
+  "irwin_id": "{1B0219EE-5298-4FEF-9927-C2666D9D53FC}",
+  "latitude": 44.803333,
+  "longitude": -120.199167,
+  "coordinate_fields": ["attr_InitialLatitude", "attr_InitialLongitude"],
+  "description": "NIFC reported incident origin, not a perimeter centroid.",
+  "discovery_utc": "2026-07-16T00:51:54Z",
+  "retrieved_date": "2026-10-15",
+  "source": "https://services3.arcgis.com/T4QMspbfLg3qTGWY/arcgis/rest/services/WFIGS_Interagency_Perimeters_YearToDate/FeatureServer/0"
+}

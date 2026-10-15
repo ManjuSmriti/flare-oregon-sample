@@ -1,0 +1,25 @@
+{
+  "source": "USGS Fire Danger Forecast",
+  "source_url": "https://edcintl.cr.usgs.gov/downloads/sciweb1/shared/firedanger/download-tool/source_rasters/wfpi-forecast-1/wfpi-forecast-1_data_20260714_20260714.zip",
+  "source_sha256": "cbc1d003498f114e83d7b7713827aa5a2aeb4e96756f2dbb7741bbc4cbb24b21",
+  "product": "WFPI",
+  "units": "unitless index",
+  "archive_product": "Day 1 forecast",
+  "valid_date": "2026-07-14",
+  "issue_time": null,
+  "lead_hours": null,
+  "timing_note": "Day 1 archive and ground-condition date verified. Exact issue timestamp and hourly lead are not supplied in this download metadata; no matched-issuance claim.",
+  "source_crs": "PROJCS[\"Sphere_ARC_INFO_Lambert_Azimuthal_Equal_Area\",GEOGCS[\"GCS_Sphere_ARC_INFO\",DATUM[\"D_Sphere_ARC_INFO\",SPHEROID[\"Sphere_ARC_INFO\",6370997,0]],PRIMEM[\"Greenwich\",0],UNIT[\"degree\",0.0174532925199433,AUTHORITY[\"EPSG\",\"9122\"]]],PROJECTION[\"Lambert_Azimuthal_Equal_Area\"],PARAMETER[\"latitude_of_center\",45],PARAMETER[\"longitude_of_center\",-100],PARAMETER[\"false_easting\",0],PARAMETER[\"false_northing\",0],UNIT[\"metre\",1],AXIS[\"Easting\",EAST],AXIS[\"Northing\",NORTH]]",
+  "source_resolution": [
+    1000.0,
+    1000.0
+  ],
+  "source_nodata": 255.0,
+  "source_dtype": "uint8",
+  "source_scale": 1.0,
+  "source_offset": 0.0,
+  "date": "2026-07-14",
+  "retrieved_utc": "2026-10-15T04:06:13.736209+00:00",
+  "subset": "Native cells in county bounding window plus padding; no resampling.",
+  "file_sha256": "a2b99f77d74870617cc88c3908844c415ed6daeaa8f918077b97b6499134f5be"
+}

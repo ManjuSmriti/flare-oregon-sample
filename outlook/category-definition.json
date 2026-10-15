@@ -1,0 +1,32 @@
+{
+  "boundaries": [
+    0.0,
+    0.4,
+    0.5,
+    0.6,
+    0.7,
+    0.8,
+    1.0
+  ],
+  "codes": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6
+  ],
+  "labels": [
+    "Unavailable",
+    "Minimal",
+    "Low",
+    "Moderate",
+    "High",
+    "Very high",
+    "Extreme"
+  ],
+  "intervals": "Lower-inclusive, upper-exclusive; final interval includes 1. Existing unavailable pixels remain 0.",
+  "revision": "2026-10-15",
+  "derived_from": "outlook_index"
+}

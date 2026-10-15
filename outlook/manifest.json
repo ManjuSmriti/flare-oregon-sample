@@ -1,5 +1,5 @@
 {
-  "title": "FLARE Outlook v11 July 3 to 21 2026",
+  "title": "FLARE FireOutlook v11 July 3 to 21 2026",
   "intended_github_owner": "ManjuSmriti",
   "repository": "ManjuSmriti/flare-oregon-sample",
   "repository_directory": "outlook",
@@ -21,15 +21,15 @@
       "issue": "2026-07-03T03:00:00Z",
       "valid_start": "2026-07-03T12:00:00Z",
       "valid_end": "2026-07-04T12:00:00Z",
-      "bytes": 100034704,
-      "sha256": "817e8f7e3d54a2f779a43bc6867b47658c5989ffdb7080aef27f58c54d3e34cb",
+      "bytes": 100133353,
+      "sha256": "1f14a735d94250e06c7bb1c449b44a270be0955431c4f33c019c73b22b7f5e63",
       "source_run": "full_west_20260703_v11_eightday_20260920_run2",
       "source_manifest_sha256": "ec179aa663e684c745cd2352a4c879ed1cd386f049314e29d0fc780fad8e1351",
       "source_results_sha256": "040b253a7f54dac92c9a1a9fdd708a3c5732fb2ba37dafb29871675c0045284b",
       "processing_created": "2026-09-20T18:52:55.401274+00:00",
       "verification": {
         "outlook_index": "all pixels equal to source, including NaN positions",
-        "category": "all pixels equal to source, including NaN positions",
+        "category": "Every pixel verified against documented index thresholds; unavailable mask preserved.",
         "lat": "all pixels equal to source, including NaN positions",
         "lon": "all pixels equal to source, including NaN positions"
       },
@@ -42,7 +42,17 @@
           512
         ]
       },
-      "recompression_verified": "all four retained arrays have identical compressed chunks to previously source-verified arrays"
+      "recompression_verified": "Compression and chunk layout preserved; index and coordinates equal to backup at every pixel.",
+      "changed_pixels": 13863831,
+      "category_pixel_counts": [
+        18568434,
+        2622856,
+        1270111,
+        2036983,
+        5013638,
+        8251644,
+        880558
+      ]
     },
     {
       "date": "2026-07-04",
@@ -50,15 +60,15 @@
       "issue": "2026-07-04T03:00:00Z",
       "valid_start": "2026-07-04T12:00:00Z",
       "valid_end": "2026-07-05T12:00:00Z",
-      "bytes": 99795283,
-      "sha256": "09951ba572105c1748aaf147cb19f36882c493e2c76a2571e73356b316fdad43",
+      "bytes": 99824919,
+      "sha256": "64147502bd3b6d6a7a006b067785d1fb6df559ad51b92360fb24c8a1dc220527",
       "source_run": "full_west_20260704_v11_continuation_20260923",
       "source_manifest_sha256": "40e1c1971864b2b7016a4a570ec9df7e5f7863d94832eded5ebb0c7992289a41",
       "source_results_sha256": "4c92c06a9afc5d2d672c8939344ba51d0a745513888b05d8a71d9ee9dab50a71",
       "processing_created": "2026-09-23T14:25:29.208618+00:00",
       "verification": {
         "outlook_index": "all pixels equal to source, including NaN positions",
-        "category": "all pixels equal to source, including NaN positions",
+        "category": "Every pixel verified against documented index thresholds; unavailable mask preserved.",
         "lat": "all pixels equal to source, including NaN positions",
         "lon": "all pixels equal to source, including NaN positions"
       },
@@ -71,7 +81,17 @@
           512
         ]
       },
-      "recompression_verified": "all four retained arrays have identical compressed chunks to previously source-verified arrays"
+      "recompression_verified": "Compression and chunk layout preserved; index and coordinates equal to backup at every pixel.",
+      "changed_pixels": 13987573,
+      "category_pixel_counts": [
+        18568434,
+        1713331,
+        996265,
+        1744462,
+        5032360,
+        9011745,
+        1577627
+      ]
     },
     {
       "date": "2026-07-05",
@@ -79,15 +99,15 @@
       "issue": "2026-07-05T03:00:00Z",
       "valid_start": "2026-07-05T12:00:00Z",
       "valid_end": "2026-07-06T12:00:00Z",
-      "bytes": 100030685,
-      "sha256": "5c8db2c8a9f5d73df4c63dfd4055e490f550802846d282c5e342696c186ee7c8",
+      "bytes": 100110922,
+      "sha256": "b4f66b7d0e443221d7016637123a4504ab9711025c159d4f3755d7f0b4acd286",
       "source_run": "full_west_20260705_v11_continuation_20260923",
       "source_manifest_sha256": "7fe6ab8345af03e3a131d85bae05a80ae290dc790a133678035f13e79f6c4186",
       "source_results_sha256": "8ec01cd1b931a261709c450f65b3406827cdd1e60ccc7f8714363ffc11bb1075",
       "processing_created": "2026-09-23T18:25:47.255287+00:00",
       "verification": {
         "outlook_index": "all pixels equal to source, including NaN positions",
-        "category": "all pixels equal to source, including NaN positions",
+        "category": "Every pixel verified against documented index thresholds; unavailable mask preserved.",
         "lat": "all pixels equal to source, including NaN positions",
         "lon": "all pixels equal to source, including NaN positions"
       },
@@ -100,7 +120,17 @@
           512
         ]
       },
-      "recompression_verified": "all four retained arrays have identical compressed chunks to previously source-verified arrays"
+      "recompression_verified": "Compression and chunk layout preserved; index and coordinates equal to backup at every pixel.",
+      "changed_pixels": 12518667,
+      "category_pixel_counts": [
+        18568433,
+        1860539,
+        1242752,
+        1948295,
+        4148140,
+        8301647,
+        2574418
+      ]
     },
     {
       "date": "2026-07-06",
@@ -108,15 +138,15 @@
       "issue": "2026-07-06T03:00:00Z",
       "valid_start": "2026-07-06T12:00:00Z",
       "valid_end": "2026-07-07T12:00:00Z",
-      "bytes": 100576568,
-      "sha256": "bd5bef25b9e7565257622132fe465094bec655bb9ef45f3eda63f6ef93c0561f",
+      "bytes": 100741101,
+      "sha256": "087fc73bdaf0bb06fcbfb3e7863b1ed7ab440791b18770b3f03f4710c020b52e",
       "source_run": "full_west_20260706_v11_continuation_20260923",
       "source_manifest_sha256": "2ee58a13736976fd9b510cdef41e6afab1bd2463c564b84ec502efbec0942ec7",
       "source_results_sha256": "54d9d9596cca0a1d795a103ff0d451447769ca0264ed96abfaddbae0cd531746",
       "processing_created": "2026-09-23T19:27:45.335273+00:00",
       "verification": {
         "outlook_index": "all pixels equal to source, including NaN positions",
-        "category": "all pixels equal to source, including NaN positions",
+        "category": "Every pixel verified against documented index thresholds; unavailable mask preserved.",
         "lat": "all pixels equal to source, including NaN positions",
         "lon": "all pixels equal to source, including NaN positions"
       },
@@ -129,7 +159,17 @@
           512
         ]
       },
-      "recompression_verified": "all four retained arrays have identical compressed chunks to previously source-verified arrays"
+      "recompression_verified": "Compression and chunk layout preserved; index and coordinates equal to backup at every pixel.",
+      "changed_pixels": 13236484,
+      "category_pixel_counts": [
+        18568433,
+        2282016,
+        1807370,
+        2891013,
+        4925740,
+        6713499,
+        1456153
+      ]
     },
     {
       "date": "2026-07-07",
@@ -137,15 +177,15 @@
       "issue": "2026-07-07T03:00:00Z",
       "valid_start": "2026-07-07T12:00:00Z",
       "valid_end": "2026-07-08T12:00:00Z",
-      "bytes": 100622652,
-      "sha256": "c38d1ae5eb2d6b43c638daaf8418ca9167b6211d27595e203da3d82e6f841ce5",
+      "bytes": 100711857,
+      "sha256": "ebc009eab883c1bc73ba6c5f7bd4fa38bf5437f34ea6b48cf7be6f302ca07307",
       "source_run": "full_west_20260707_v11_continuation_20260923",
       "source_manifest_sha256": "38a3f0197293dbecc3a3c0c2dcc4f18faf801ab5026cd65d03cc01b27a75310d",
       "source_results_sha256": "13c223b0fe206d81358148816e10c29a6007095efb6f8ccc99c639780c3e5865",
       "processing_created": "2026-09-23T21:17:55.367503+00:00",
       "verification": {
         "outlook_index": "all pixels equal to source, including NaN positions",
-        "category": "all pixels equal to source, including NaN positions",
+        "category": "Every pixel verified against documented index thresholds; unavailable mask preserved.",
         "lat": "all pixels equal to source, including NaN positions",
         "lon": "all pixels equal to source, including NaN positions"
       },
@@ -158,7 +198,17 @@
           512
         ]
       },
-      "recompression_verified": "all four retained arrays have identical compressed chunks to previously source-verified arrays"
+      "recompression_verified": "Compression and chunk layout preserved; index and coordinates equal to backup at every pixel.",
+      "changed_pixels": 11064364,
+      "category_pixel_counts": [
+        18568433,
+        2850565,
+        1495859,
+        2062010,
+        3793971,
+        6839218,
+        3034168
+      ]
     },
     {
       "date": "2026-07-08",
@@ -166,15 +216,15 @@
       "issue": "2026-07-08T03:00:00Z",
       "valid_start": "2026-07-08T12:00:00Z",
       "valid_end": "2026-07-09T12:00:00Z",
-      "bytes": 100727272,
-      "sha256": "6ebba040f1d49ff832484330aab8f0599e0919eff3d183bc7dfb53288e3626aa",
+      "bytes": 100803504,
+      "sha256": "97031be4267f033e8dc37347705f6441265b02f1b897d7f3ff37fdd405b90db0",
       "source_run": "full_west_20260708_v11_continuation_20260923",
       "source_manifest_sha256": "4ffd1d7243d2a6f9122c2c512b7472a1e926d5403a55fdf935564286e3014328",
       "source_results_sha256": "ed3de4db1cdba2ed99a6f52aee8dc8b116bf03ad7740278b25b28eacedb6d27c",
       "processing_created": "2026-09-23T23:27:04.302790+00:00",
       "verification": {
         "outlook_index": "all pixels equal to source, including NaN positions",
-        "category": "all pixels equal to source, including NaN positions",
+        "category": "Every pixel verified against documented index thresholds; unavailable mask preserved.",
         "lat": "all pixels equal to source, including NaN positions",
         "lon": "all pixels equal to source, including NaN positions"
       },
@@ -187,7 +237,17 @@
           512
         ]
       },
-      "recompression_verified": "all four retained arrays have identical compressed chunks to previously source-verified arrays"
+      "recompression_verified": "Compression and chunk layout preserved; index and coordinates equal to backup at every pixel.",
+      "changed_pixels": 11339611,
+      "category_pixel_counts": [
+        18568433,
+        1778743,
+        1155025,
+        1974921,
+        3450283,
+        8751618,
+        2965201
+      ]
     },
     {
       "date": "2026-07-09",
@@ -195,15 +255,15 @@
       "issue": "2026-07-09T03:00:00Z",
       "valid_start": "2026-07-09T12:00:00Z",
       "valid_end": "2026-07-10T12:00:00Z",
-      "bytes": 100372545,
-      "sha256": "ab3baebb88f4e29728e2ca08fc26a8f234cd67cbdf731ba43d3392f0b29650db",
+      "bytes": 100457544,
+      "sha256": "0303f4f5c2dc54e22f9cc78ec37a72d19c276c555d6a0f242100376e1aa7dee3",
       "source_run": "full_west_20260709_v11_continuation_20260923",
       "source_manifest_sha256": "7be1420ffa04de0049e7d97a8a847823f08d3c6cf8fe072342144c90c9b1c580",
       "source_results_sha256": "cf9006b64d0e49a583914ce3a90b49f086c787994ae896399e95311dc473dc0a",
       "processing_created": "2026-09-27T15:06:26.165136+00:00",
       "verification": {
         "outlook_index": "all pixels equal to source, including NaN positions",
-        "category": "all pixels equal to source, including NaN positions",
+        "category": "Every pixel verified against documented index thresholds; unavailable mask preserved.",
         "lat": "all pixels equal to source, including NaN positions",
         "lon": "all pixels equal to source, including NaN positions"
       },
@@ -216,7 +276,17 @@
           512
         ]
       },
-      "recompression_verified": "all four retained arrays have identical compressed chunks to previously source-verified arrays"
+      "recompression_verified": "Compression and chunk layout preserved; index and coordinates equal to backup at every pixel.",
+      "changed_pixels": 11723967,
+      "category_pixel_counts": [
+        18568433,
+        1557064,
+        1074119,
+        1781141,
+        3668629,
+        8878256,
+        3116582
+      ]
     },
     {
       "date": "2026-07-10",
@@ -224,15 +294,15 @@
       "issue": "2026-07-10T03:00:00Z",
       "valid_start": "2026-07-10T12:00:00Z",
       "valid_end": "2026-07-11T12:00:00Z",
-      "bytes": 99487941,
-      "sha256": "bd8d3a46fa58cc2ad5a30743d2173f6bcdf543da4ef32a1baef530bcc0930eea",
+      "bytes": 99527463,
+      "sha256": "ee0643d0cf28c1d7833517610922c9484fa495808fa50a396da8c5b04169fead",
       "source_run": "full_west_20260710_v11_continuation_20260923",
       "source_manifest_sha256": "75681f2506210a1bd63a06bae0e23a33b803a7b8d0ef0b1f13a0f81e99c16cf3",
       "source_results_sha256": "15641223b1af1c5571ab639130e3d369b0023cd2434b20ab09a183ec5b659e50",
       "processing_created": "2026-09-27T17:43:47.580948+00:00",
       "verification": {
         "outlook_index": "all pixels equal to source, including NaN positions",
-        "category": "all pixels equal to source, including NaN positions",
+        "category": "Every pixel verified against documented index thresholds; unavailable mask preserved.",
         "lat": "all pixels equal to source, including NaN positions",
         "lon": "all pixels equal to source, including NaN positions"
       },
@@ -245,7 +315,17 @@
           512
         ]
       },
-      "recompression_verified": "all four retained arrays have identical compressed chunks to previously source-verified arrays"
+      "recompression_verified": "Compression and chunk layout preserved; index and coordinates equal to backup at every pixel.",
+      "changed_pixels": 11483313,
+      "category_pixel_counts": [
+        18568433,
+        1487931,
+        797245,
+        1522778,
+        3114184,
+        10371284,
+        2782369
+      ]
     },
     {
       "date": "2026-07-11",
@@ -253,15 +333,15 @@
       "issue": "2026-07-11T03:00:00Z",
       "valid_start": "2026-07-11T12:00:00Z",
       "valid_end": "2026-07-12T12:00:00Z",
-      "bytes": 99022744,
-      "sha256": "be2f21e17a1c3e506edb326dcd3c334bef7391a89c7604ebed56a461f5d8d83f",
+      "bytes": 99113350,
+      "sha256": "cd7fb45c3dbc69633f8bce22c0f14967dbf6484b4fd8f67d69056af83ac3cdb2",
       "source_run": "full_west_20260711_v11_continuation_20260923",
       "source_manifest_sha256": "eb9f75d0c2700a2f89340ee5c46e599f491f488bd235b8b475c64b4af23b963e",
       "source_results_sha256": "0d0ba911f2c1e18cda7038d602189d1e74cabb440b920e3c5262b2f9f9f558e4",
       "processing_created": "2026-09-28T02:33:36.062725+00:00",
       "verification": {
         "outlook_index": "all pixels equal to source, including NaN positions",
-        "category": "all pixels equal to source, including NaN positions",
+        "category": "Every pixel verified against documented index thresholds; unavailable mask preserved.",
         "lat": "all pixels equal to source, including NaN positions",
         "lon": "all pixels equal to source, including NaN positions"
       },
@@ -274,7 +354,17 @@
           512
         ]
       },
-      "recompression_verified": "all four retained arrays have identical compressed chunks to previously source-verified arrays"
+      "recompression_verified": "Compression and chunk layout preserved; index and coordinates equal to backup at every pixel.",
+      "changed_pixels": 11432742,
+      "category_pixel_counts": [
+        18568433,
+        1660548,
+        700745,
+        1271309,
+        3443725,
+        9777699,
+        3221765
+      ]
     },
     {
       "date": "2026-07-12",
@@ -282,15 +372,15 @@
       "issue": "2026-07-12T03:00:00Z",
       "valid_start": "2026-07-12T12:00:00Z",
       "valid_end": "2026-07-13T12:00:00Z",
-      "bytes": 99046580,
-      "sha256": "4395f3841657dc2b3d9438e717727f61f82aff9b05ddf76ff4689bc0588a3150",
+      "bytes": 99136681,
+      "sha256": "50663a04201e994358c86be97c16aaac3b2e6dc945c95e3ede3db33a356f9ae1",
       "source_run": "full_west_20260712_v11_continuation_20260923",
       "source_manifest_sha256": "d8db89b21ba88fe1e7a4461fbc50ac6e8896df460e3fa474c15d71f77e2f5b51",
       "source_results_sha256": "ac6f16eacecdf7376a5951adcb78abc28e391315a760a7aaecf25920ba475d6d",
       "processing_created": "2026-09-28T05:13:51.325276+00:00",
       "verification": {
         "outlook_index": "all pixels equal to source, including NaN positions",
-        "category": "all pixels equal to source, including NaN positions",
+        "category": "Every pixel verified against documented index thresholds; unavailable mask preserved.",
         "lat": "all pixels equal to source, including NaN positions",
         "lon": "all pixels equal to source, including NaN positions"
       },
@@ -303,7 +393,17 @@
           512
         ]
       },
-      "recompression_verified": "all four retained arrays have identical compressed chunks to previously source-verified arrays"
+      "recompression_verified": "Compression and chunk layout preserved; index and coordinates equal to backup at every pixel.",
+      "changed_pixels": 12751300,
+      "category_pixel_counts": [
+        18568433,
+        1296758,
+        1070141,
+        1694653,
+        4611577,
+        8497351,
+        2905311
+      ]
     },
     {
       "date": "2026-07-13",
@@ -311,15 +411,15 @@
       "issue": "2026-07-13T03:00:00Z",
       "valid_start": "2026-07-13T12:00:00Z",
       "valid_end": "2026-07-14T12:00:00Z",
-      "bytes": 99324436,
-      "sha256": "1f33cfc39bec39fa3b82927e20e719094bc8229564951912193b3d1cf4de461e",
+      "bytes": 99400308,
+      "sha256": "4789ea754c1cc21e8194529256f5f6dc1a333a3a636ca387c3edfdcdc09acf01",
       "source_run": "full_west_20260713_v11_continuation_20260923",
       "source_manifest_sha256": "b84927e4984205162009b64c753e6afee5505dd397ca0c296c37d8b602b5ef3a",
       "source_results_sha256": "2080ae20bcbe0261892f16f9157fe82e92516e68f88b7aafc0a320aecd69d91f",
       "processing_created": "2026-09-28T07:51:20.062270+00:00",
       "verification": {
         "outlook_index": "all pixels equal to source, including NaN positions",
-        "category": "all pixels equal to source, including NaN positions",
+        "category": "Every pixel verified against documented index thresholds; unavailable mask preserved.",
         "lat": "all pixels equal to source, including NaN positions",
         "lon": "all pixels equal to source, including NaN positions"
       },
@@ -332,7 +432,17 @@
           512
         ]
       },
-      "recompression_verified": "all four retained arrays have identical compressed chunks to previously source-verified arrays"
+      "recompression_verified": "Compression and chunk layout preserved; index and coordinates equal to backup at every pixel.",
+      "changed_pixels": 14848826,
+      "category_pixel_counts": [
+        18568433,
+        1089109,
+        1256870,
+        2781799,
+        6884530,
+        6620306,
+        1443177
+      ]
     },
     {
       "date": "2026-07-14",
@@ -340,15 +450,15 @@
       "issue": "2026-07-14T03:00:00Z",
       "valid_start": "2026-07-14T12:00:00Z",
       "valid_end": "2026-07-15T12:00:00Z",
-      "bytes": 100503575,
-      "sha256": "95a32ca490a99b227bbd37edf0f59eccfbf06088e2fdd9ab0542c8fcddc97dc7",
+      "bytes": 100624035,
+      "sha256": "4ec1b318f9681250cbca49a0187b2940f562af1096859d8357dcd0068bd15253",
       "source_run": "full_west_20260714_v11_continuation_20260923",
       "source_manifest_sha256": "177dce382403735eee7306ea24de1e69898cc50d09f24ac6de0b637f4b0952b8",
       "source_results_sha256": "5ca9a4f16084dc68db577938791f998a881f6ba4d0026ef2119a495b3fc40967",
       "processing_created": "2026-09-28T10:32:57.077463+00:00",
       "verification": {
         "outlook_index": "all pixels equal to source, including NaN positions",
-        "category": "all pixels equal to source, including NaN positions",
+        "category": "Every pixel verified against documented index thresholds; unavailable mask preserved.",
         "lat": "all pixels equal to source, including NaN positions",
         "lon": "all pixels equal to source, including NaN positions"
       },
@@ -361,7 +471,17 @@
           512
         ]
       },
-      "recompression_verified": "all four retained arrays have identical compressed chunks to previously source-verified arrays"
+      "recompression_verified": "Compression and chunk layout preserved; index and coordinates equal to backup at every pixel.",
+      "changed_pixels": 13201550,
+      "category_pixel_counts": [
+        18568433,
+        2094031,
+        2171975,
+        3057324,
+        5765393,
+        5167786,
+        1819282
+      ]
     },
     {
       "date": "2026-07-15",
@@ -369,15 +489,15 @@
       "issue": "2026-07-15T03:00:00Z",
       "valid_start": "2026-07-15T12:00:00Z",
       "valid_end": "2026-07-16T12:00:00Z",
-      "bytes": 100572208,
-      "sha256": "a1cad2ea86185976dcc4ee1a3fd8ec37c5195349207ea0b7053cf3c66234793f",
+      "bytes": 100676290,
+      "sha256": "a059c4fabc3459d1359927be2de4e3fe158caa0a8f93bf82f1727856d1f3daaf",
       "source_run": "full_west_20260715_v11_continuation_20260923",
       "source_manifest_sha256": "2153f36edbf6880635110d07799a5c86d2605969a2f2a7e2e8a900cb73208914",
       "source_results_sha256": "4d4b64e5ca6178b4006c3acee40e06777b600580f6fad21f42a5ba2e53d864e1",
       "processing_created": "2026-09-28T14:24:25.928234+00:00",
       "verification": {
         "outlook_index": "all pixels equal to source, including NaN positions",
-        "category": "all pixels equal to source, including NaN positions",
+        "category": "Every pixel verified against documented index thresholds; unavailable mask preserved.",
         "lat": "all pixels equal to source, including NaN positions",
         "lon": "all pixels equal to source, including NaN positions"
       },
@@ -390,7 +510,17 @@
           512
         ]
       },
-      "recompression_verified": "all four retained arrays have identical compressed chunks to previously source-verified arrays"
+      "recompression_verified": "Compression and chunk layout preserved; index and coordinates equal to backup at every pixel.",
+      "changed_pixels": 13512895,
+      "category_pixel_counts": [
+        18568433,
+        2733947,
+        1823889,
+        2925203,
+        6083948,
+        5089280,
+        1419524
+      ]
     },
     {
       "date": "2026-07-16",
@@ -398,15 +528,15 @@
       "issue": "2026-07-16T03:00:00Z",
       "valid_start": "2026-07-16T12:00:00Z",
       "valid_end": "2026-07-17T12:00:00Z",
-      "bytes": 100334726,
-      "sha256": "be95726d584198deb179da1dcf72342fa530fdfa6a636ab071d631e730b81221",
+      "bytes": 100402108,
+      "sha256": "e175e0904860e0d0308fa22f256388257fed7c6698e3c07a99d6887c60e6eccd",
       "source_run": "full_west_20260716_v11_continuation_20260923",
       "source_manifest_sha256": "b0814339f27bbfdd04c48eb85abf3fae34206f396305fba682d6a578a158ddef",
       "source_results_sha256": "5ed284efe26385832dbbe8685b90a590a0a9299467adb55d7b51616ef0bd0f98",
       "processing_created": "2026-09-28T18:00:30.609887+00:00",
       "verification": {
         "outlook_index": "all pixels equal to source, including NaN positions",
-        "category": "all pixels equal to source, including NaN positions",
+        "category": "Every pixel verified against documented index thresholds; unavailable mask preserved.",
         "lat": "all pixels equal to source, including NaN positions",
         "lon": "all pixels equal to source, including NaN positions"
       },
@@ -419,7 +549,17 @@
           512
         ]
       },
-      "recompression_verified": "all four retained arrays have identical compressed chunks to previously source-verified arrays"
+      "recompression_verified": "Compression and chunk layout preserved; index and coordinates equal to backup at every pixel.",
+      "changed_pixels": 12683777,
+      "category_pixel_counts": [
+        18568433,
+        2466485,
+        1746684,
+        3410478,
+        5575270,
+        4406473,
+        2470401
+      ]
     },
     {
       "date": "2026-07-17",
@@ -427,15 +567,15 @@
       "issue": "2026-07-17T03:00:00Z",
       "valid_start": "2026-07-17T12:00:00Z",
       "valid_end": "2026-07-18T12:00:00Z",
-      "bytes": 100717679,
-      "sha256": "75364a22450846230db376df1f42a7bf3b2ee5a4f9a97abc27e3d84f7725caaa",
+      "bytes": 100792828,
+      "sha256": "72d658e382a6c2b147fa31d4254f09d0345d7c1c1d1aa28c0eb4bad7a923b2a0",
       "source_run": "full_west_20260717_v11_continuation_20260923",
       "source_manifest_sha256": "efc613b6fd5a917f6d880ad69fd7891694f3351c9eb57c95880c6bcd8bc78fb1",
       "source_results_sha256": "ffe520fa9c1406fc587ab16681bb58bd6f6cb703c8a8717858192a4bcf50b0c1",
       "processing_created": "2026-09-28T20:42:41.547387+00:00",
       "verification": {
         "outlook_index": "all pixels equal to source, including NaN positions",
-        "category": "all pixels equal to source, including NaN positions",
+        "category": "Every pixel verified against documented index thresholds; unavailable mask preserved.",
         "lat": "all pixels equal to source, including NaN positions",
         "lon": "all pixels equal to source, including NaN positions"
       },
@@ -448,7 +588,17 @@
           512
         ]
       },
-      "recompression_verified": "all four retained arrays have identical compressed chunks to previously source-verified arrays"
+      "recompression_verified": "Compression and chunk layout preserved; index and coordinates equal to backup at every pixel.",
+      "changed_pixels": 12452263,
+      "category_pixel_counts": [
+        18568433,
+        3831819,
+        2272028,
+        3575162,
+        4896885,
+        4434392,
+        1065505
+      ]
     },
     {
       "date": "2026-07-18",
@@ -456,15 +606,15 @@
       "issue": "2026-07-18T03:00:00Z",
       "valid_start": "2026-07-18T12:00:00Z",
       "valid_end": "2026-07-19T12:00:00Z",
-      "bytes": 100593731,
-      "sha256": "b1984ada4c304d6461a7e77fa87195c8b0bae47e8a2564ca502c43e8eed55b1b",
+      "bytes": 100669198,
+      "sha256": "1d0a320d4e3c79309e53530e41d754a76de22db13181ecf20246a9d74bc81143",
       "source_run": "full_west_20260718_v11_continuation_20260923",
       "source_manifest_sha256": "73cb9591727e0185ee3022755573127e4a206660260f029a9daf1ab86597e704",
       "source_results_sha256": "0975e89aa866d9156afbefda9d7a6218aeb96a0cf274ee11bb7c3a783bfd8183",
       "processing_created": "2026-09-29T01:35:47.808467+00:00",
       "verification": {
         "outlook_index": "all pixels equal to source, including NaN positions",
-        "category": "all pixels equal to source, including NaN positions",
+        "category": "Every pixel verified against documented index thresholds; unavailable mask preserved.",
         "lat": "all pixels equal to source, including NaN positions",
         "lon": "all pixels equal to source, including NaN positions"
       },
@@ -477,7 +627,17 @@
           512
         ]
       },
-      "recompression_verified": "all four retained arrays have identical compressed chunks to previously source-verified arrays"
+      "recompression_verified": "Compression and chunk layout preserved; index and coordinates equal to backup at every pixel.",
+      "changed_pixels": 14099313,
+      "category_pixel_counts": [
+        18568433,
+        2504066,
+        2035669,
+        3419895,
+        5893600,
+        5533600,
+        688961
+      ]
     },
     {
       "date": "2026-07-19",
@@ -485,15 +645,15 @@
       "issue": "2026-07-19T03:00:00Z",
       "valid_start": "2026-07-19T12:00:00Z",
       "valid_end": "2026-07-20T12:00:00Z",
-      "bytes": 100432302,
-      "sha256": "2796e60a69df6c2a10678ad9b4e32d5566d959105c1089442ee1ab800a51b1d0",
+      "bytes": 100513351,
+      "sha256": "5de33c4ee3a3d69a133e5a87bca838905e4b0ec0eed4c4db8af3b6abf08d5abf",
       "source_run": "full_west_20260719_v11_continuation_20260923",
       "source_manifest_sha256": "222493986c8a98897922c1e41c3cd928daa49d955a7c324005b6755d4c9135bb",
       "source_results_sha256": "32abb2ea3044e3c5d6e8dc6eacf0b9f9ba74994571dee97fde36642ae04fa981",
       "processing_created": "2026-09-29T04:38:22.934252+00:00",
       "verification": {
         "outlook_index": "all pixels equal to source, including NaN positions",
-        "category": "all pixels equal to source, including NaN positions",
+        "category": "Every pixel verified against documented index thresholds; unavailable mask preserved.",
         "lat": "all pixels equal to source, including NaN positions",
         "lon": "all pixels equal to source, including NaN positions"
       },
@@ -506,7 +666,17 @@
           512
         ]
       },
-      "recompression_verified": "all four retained arrays have identical compressed chunks to previously source-verified arrays"
+      "recompression_verified": "Compression and chunk layout preserved; index and coordinates equal to backup at every pixel.",
+      "changed_pixels": 14057144,
+      "category_pixel_counts": [
+        18568433,
+        1557181,
+        1485724,
+        2619347,
+        5562339,
+        7254471,
+        1596729
+      ]
     },
     {
       "date": "2026-07-20",
@@ -514,15 +684,15 @@
       "issue": "2026-07-20T03:00:00Z",
       "valid_start": "2026-07-20T12:00:00Z",
       "valid_end": "2026-07-21T12:00:00Z",
-      "bytes": 100292647,
-      "sha256": "324724846e40e37842779f628457e46559af68097928d390dfac811815f01ee9",
+      "bytes": 100390844,
+      "sha256": "d2c74488cbb7cae020f5d0e07526d87c97b4e7b533694c7f61eb21f375782b14",
       "source_run": "full_west_20260720_v11_continuation_20260923",
       "source_manifest_sha256": "4f1640e8c89bb0320bb66df966890ce44380d4071385b45ebcfa9998b9668c2b",
       "source_results_sha256": "ec7286b4969b2726e4b9c3dab942fa8857273df59c474951a673c5029891652d",
       "processing_created": "2026-09-29T07:17:23.385655+00:00",
       "verification": {
         "outlook_index": "all pixels equal to source, including NaN positions",
-        "category": "all pixels equal to source, including NaN positions",
+        "category": "Every pixel verified against documented index thresholds; unavailable mask preserved.",
         "lat": "all pixels equal to source, including NaN positions",
         "lon": "all pixels equal to source, including NaN positions"
       },
@@ -535,7 +705,17 @@
           512
         ]
       },
-      "recompression_verified": "all four retained arrays have identical compressed chunks to previously source-verified arrays"
+      "recompression_verified": "Compression and chunk layout preserved; index and coordinates equal to backup at every pixel.",
+      "changed_pixels": 13911318,
+      "category_pixel_counts": [
+        18568433,
+        1568784,
+        1868149,
+        2921086,
+        5252073,
+        6877209,
+        1588490
+      ]
     },
     {
       "date": "2026-07-21",
@@ -543,15 +723,15 @@
       "issue": "2026-07-21T03:00:00Z",
       "valid_start": "2026-07-21T12:00:00Z",
       "valid_end": "2026-07-22T12:00:00Z",
-      "bytes": 99800756,
-      "sha256": "5e91b0e776667767a5ef590837220df79027fb867b06f6f023c3da311ad09db0",
+      "bytes": 99963071,
+      "sha256": "741611c1d903a1c68825ecb478b42666ac4a904dc3c9da3314871221f61fcb62",
       "source_run": "full_west_20260721_v11_task1_20261001",
       "source_manifest_sha256": "876402a12156beccac06e1ca7dd79eeb7c7b03cddb515f19ab719a6783dc7bd4",
       "source_results_sha256": "c51da85c054aeade3ce4e24cacf7235f2f40a395e40a31128f813678e7b4e1ab",
       "processing_created": "2026-10-01T13:05:15.520992+00:00",
       "verification": {
         "outlook_index": "all pixels equal to source, including NaN positions",
-        "category": "all pixels equal to source, including NaN positions",
+        "category": "Every pixel verified against documented index thresholds; unavailable mask preserved.",
         "lat": "all pixels equal to source, including NaN positions",
         "lon": "all pixels equal to source, including NaN positions"
       },
@@ -564,9 +744,51 @@
           512
         ]
       },
-      "recompression_verified": "all four retained arrays have identical compressed chunks to previously source-verified arrays"
+      "recompression_verified": "Compression and chunk layout preserved; index and coordinates equal to backup at every pixel.",
+      "changed_pixels": 14619167,
+      "category_pixel_counts": [
+        18568433,
+        2479263,
+        2714671,
+        4161809,
+        6294301,
+        4010453,
+        415294
+      ]
     }
   ],
-  "total_bytes": 1902289034,
-  "license": "CC-BY-NC-ND-4.0"
+  "total_bytes": 1903992727,
+  "license": "CC-BY-NC-ND-4.0",
+  "category_definition": {
+    "boundaries": [
+      0.0,
+      0.4,
+      0.5,
+      0.6,
+      0.7,
+      0.8,
+      1.0
+    ],
+    "codes": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "labels": [
+      "Unavailable",
+      "Minimal",
+      "Low",
+      "Moderate",
+      "High",
+      "Very high",
+      "Extreme"
+    ],
+    "intervals": "Lower-inclusive, upper-exclusive; final interval includes 1. Existing unavailable pixels remain 0.",
+    "revision": "2026-10-15",
+    "derived_from": "outlook_index"
+  }
 }

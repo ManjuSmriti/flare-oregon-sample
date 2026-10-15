@@ -6,3 +6,6 @@ matplotlib>=3.8
 cartopy>=0.22
 jupyterlab>=4
 ipykernel>=6
+shapely>=2
+pyproj>=3.4
+rasterio>=1.3

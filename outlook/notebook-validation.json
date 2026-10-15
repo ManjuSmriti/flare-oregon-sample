@@ -1,6 +1,6 @@
 {
   "executed": true,
-  "executed_at": "2026-10-14T03:59:41.509828+00:00",
+  "executed_at": "2026-10-15T17:38:35.012538+00:00",
   "results": [
     {
       "notebook": "01_open_and_check.ipynb",
@@ -19,8 +19,8 @@
     {
       "notebook": "03_daily_point_series.ipynb",
       "status": "passed",
-      "code_cells": 3,
-      "embedded_figures": 1,
+      "code_cells": 8,
+      "embedded_figures": 7,
       "outputs_saved": true
     }
   ]
