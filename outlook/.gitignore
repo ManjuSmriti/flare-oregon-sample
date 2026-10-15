@@ -7,3 +7,8 @@ __pycache__/
 .ipynb_checkpoints/
 *.pyc
 user_outputs/
+!data/FLARE_Outlook_v11_20260715T0300Z.nc
+!data/FLARE_Outlook_v11_20260716T0300Z.nc
+!data/FLARE_Outlook_v11_20260717T0300Z.nc
+!data/FLARE_Outlook_v11_20260718T0300Z.nc
+!data/FLARE_Outlook_v11_20260719T0300Z.nc
