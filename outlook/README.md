@@ -1,8 +1,8 @@
 # FLARE Outlook v11 daily forecasts
 
-Nineteen full western domain daily forecast files for July 3–21, 2026, prepared for **ManjuSmriti**. Each self-contained NetCDF includes the original Outlook index, category, latitude and longitude arrays. The native grid and numeric values are preserved without trimming, resampling or quantization.
+Nineteen full western domain daily forecast files for July 3–21, 2026, prepared by **ManjuSmriti**. Each self-contained NetCDF includes the original Outlook index, category, latitude and longitude arrays. The native grid and numeric values are preserved without trimming, resampling or quantization.
 
-Part of [ManjuSmriti/flare-oregon-sample](https://github.com/ManjuSmriti/flare-oregon-sample). Executed notebook outputs and the map preview are included here. The 19 daily NetCDF files are awaiting separate Release upload; download links will be added when that upload completes.
+Part of [ManjuSmriti/flare-oregon-sample](https://github.com/ManjuSmriti/flare-oregon-sample). Executed notebook outputs and the map preview are included here. 
 
 ## Data and times
 
