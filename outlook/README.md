@@ -1,6 +1,6 @@
 # FLARE FireOutlook examples
 
-## New: seven-day FireOutlook2.0
+## Seven-day FireOutlook2.0
 
 The [seven-day guide](seven_day/README.md) and
 [notebook](notebooks/04_seven_day_outlook.ipynb) hold **July 15, 2026** fixed and
@@ -15,7 +15,7 @@ archive uses NBM for Days 2-7 and HRRR for Day 1. Longer leads remain experiment
 
 ## Original v11 daily forecasts
 
-Nineteen full western domain daily forecast files for July 3–21, 2026, prepared by **ManjuSmriti**. Each self-contained NetCDF includes the original Outlook index, category, latitude and longitude arrays. The native grid and numeric values are preserved without trimming, resampling or quantization.
+Nineteen full western-domain daily forecast files for July 3–21, 2026, by **Manju Smriti**. Each NetCDF includes the Outlook index, category, latitude and longitude. Index and coordinate values retain their source precision on the native grid. Published v11 categories follow the October 15, 2026 definition in `category-definition.json`.
 
 Part of [ManjuSmriti/flare-oregon-sample](https://github.com/ManjuSmriti/flare-oregon-sample). Executed notebook outputs and the map preview are included here. 
 
@@ -49,19 +49,23 @@ On Windows, activate with `.venv\Scripts\activate` instead.
 
 1. [Open and check](notebooks/01_open_and_check.ipynb) — choose a date, inspect metadata and verify its checksum.
 2. [Geographic maps](notebooks/02_geographic_maps.ipynb) — plot Outlook index and category over country and state boundaries, then select a geographic region.
-3. [Daily point series](notebooks/03_daily_point_series.ipynb) — select latitude and longitude and compare all 19 daily forecasts at the nearest original grid pixel.
+3. [Wheeler County analysis](notebooks/03_daily_point_series.ipynb) — examine county distributions and high-index area, then compare July 13-16 maps with SPC and USGS products.
+4. [July 15 forecast progression](notebooks/04_seven_day_outlook.ipynb) — compare seven evening updates for one target period, with animation and five fire-location examples.
 
 Clone the parent repository and enter `outlook/` before running the setup commands. The daily NetCDF files are included in `outlook/data/`. You can inspect the saved outputs immediately without running the notebooks.
 
-The notebooks use only the packaged NetCDF files and bundled public-domain map boundaries. No external drive or private source code is needed. Maps use true latitude/longitude axes. Display stride reduces rendering cost only; the files remain full resolution. There are no spectral bands in this package, so these notebooks map Outlook products rather than false-color RGB imagery.
+The notebooks use the bundled NetCDF files, boundaries and reference datasets.
+Maps use geographic coordinates. Where a plotting stride is used, it reduces
+display density while leaving the data unchanged. The Oregon notebooks in the
+repository root provide the separate spectral-imagery examples.
 
 ## Daily files and verification
 
-Files are in `data/`, named `FLARE_Outlook_v11_YYYYMMDDT0300Z.nc`. `manifest.json` lists every issue date, valid interval, byte size and SHA-256 digest. `SHA256SUMS.txt` supports independent file verification. Every exported pixel in all four arrays is compared against its original source, including NaN locations.
+Files are in `data/`, named `FLARE_Outlook_v11_YYYYMMDDT0300Z.nc`. `manifest.json` lists every issue date, valid interval, byte size and SHA-256 digest. `SHA256SUMS.txt` supports independent verification. Index and coordinate arrays were checked against their sources, including NaN locations. Categories were checked against the published v11 thresholds, with the unavailable mask preserved.
 
-The 19 NetCDF files total **1,902,289,034 bytes (1.90 GB)**. Individual files range from **99.02 to 100.73 MB**, including the full latitude/longitude arrays in every file. Every daily file is below 100 MiB (104,857,600 bytes). Storage figures labelled MB and GB use decimal units.
+The 19 NetCDF files total **1,903,992,727 bytes (1.90 GB)**. Individual files range from **99.11 to 100.80 MB**, including the full latitude/longitude arrays in every file. Every daily file is below 100 MiB (104,857,600 bytes). Storage figures labelled MB and GB use decimal units.
 
-Each file includes its own coordinates and is tracked under `outlook/data/`, so it can also be downloaded independently from the repository. The existing ignore rules do not remove these already tracked files.
+Each file includes its own coordinates and can be downloaded independently from `outlook/data/`.
 
 Files use native NetCDF4 **zlib level 9**, byte shuffling and **512 × 512** chunks. They open directly with xarray; no ZIP extraction is needed. Compression is lossless and preserves all original numeric values and missing-value positions. Equivalent xarray write settings are:
 
@@ -74,12 +78,12 @@ encoding = {
 ds.to_netcdf("outlook.nc", engine="netcdf4", encoding=encoding)
 ```
 
-## Attribution and publication review
+## Attribution and license
 
 Creator: **Manju Smriti**. Institution: **BRIDGE - Research and Policy Foundation; ARTH GEO Intelligence**. GitHub repository: **ManjuSmriti/flare-oregon-sample**, under `outlook/`.
 
-The dataset is licensed under **Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)**, matching the license selected on the existing Zenodo record. See `LICENSE.txt` and the [license terms](https://creativecommons.org/licenses/by-nc-nd/4.0/). The Oregon sample DOI is not assigned to this distinct Outlook product.
+The dataset is licensed under **Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)**. See `LICENSE.txt` and the [license terms](https://creativecommons.org/licenses/by-nc-nd/4.0/). Cite this repository and the commit used for Outlook analyses; the Oregon FireScore DOI identifies a separate dataset.
 
-Original run identifiers and manifest/result hashes are retained for provenance. Private local filesystem paths and the underlying forecasting implementation are not included.
+The manifest retains source run identifiers and hashes for provenance.
 
 Basemap boundaries: [Natural Earth](https://www.naturalearthdata.com/), 1:110m countries and state/province lines, public domain. Their accompanying source readme and version files are bundled under `assets/natural_earth/`.

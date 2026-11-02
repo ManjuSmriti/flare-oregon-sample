@@ -1,4 +1,4 @@
-"""Read and plot the public FLARE Outlook arrays without any private inputs."""
+"""Read and plot the bundled FLARE Outlook datasets."""
 from pathlib import Path
 import hashlib
 import json

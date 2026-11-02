@@ -1,9 +1,10 @@
 {
   "title": "FLARE FireOutlook v11 July 3 to 21 2026",
-  "intended_github_owner": "ManjuSmriti",
+  "github_owner": "ManjuSmriti",
   "repository": "ManjuSmriti/flare-oregon-sample",
   "repository_directory": "outlook",
-  "uploaded": false,
+  "uploaded": true,
+  "distribution": "GitHub repository, outlook/data",
   "shape": [
     5792,
     6672

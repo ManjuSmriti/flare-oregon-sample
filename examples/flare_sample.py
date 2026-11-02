@@ -36,7 +36,6 @@ def false_rgb(ds):
     """Packaged viewer style: I03/I02/I01, fixed 0–0.6 stretch, gamma 2.2.
 
     This is a display transform of reconstructed radiances, not reflectance.
-    It differs from the older percentile-stretched cover image.
     """
     values = np.stack([ds[k].values for k in ('I03','I02','I01')], axis=-1)
     valid = np.isfinite(values).all(axis=-1) & (values >= 0).all(axis=-1)

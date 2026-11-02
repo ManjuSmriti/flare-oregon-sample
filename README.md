@@ -1,4 +1,4 @@
-# FLARE Oregon sample — FireScore v7.14
+# FLARE: FireOutlook and Oregon FireScore data
 
 ## FLARE FireOutlook: now through Day 7
 
@@ -8,11 +8,12 @@ Explore [how the forecast for July 15 changed](outlook/seven_day/README.md) with
 
 The original [FLARE Outlook v11 dataset](outlook/README.md) remains available: **19 separate Day-1 issuances for July 3-21, 2026**, with `outlook_index`, `category`, `lat`, and `lon` on the full native 5792 × 6672 western-domain grid. These historical files and the Oregon FireScore sample below are unchanged.
 
-Preview the executed notebooks directly on GitHub:
+Browse the Outlook notebooks:
 
 - [Open data and inspect metadata](outlook/notebooks/01_open_and_check.ipynb)
 - [Geographic maps](outlook/notebooks/02_geographic_maps.ipynb)
-- [Daily forecast series at a selected location](outlook/notebooks/03_daily_point_series.ipynb)
+- [Wheeler County distributions, maps and fire-danger comparisons](outlook/notebooks/03_daily_point_series.ipynb)
+- [July 15 forecast progression across seven evening updates](outlook/notebooks/04_seven_day_outlook.ipynb)
 
 ![FLARE Outlook index and category for July 3, 2026](outlook/preview/outlook_20260703.png)
 
@@ -56,8 +57,8 @@ NetCDF files preserve full source precision.
 
 The full 25-scene collection (17:41–18:41 and 19:21–20:16 UTC, with a gap)
 is published as a **[restricted Zenodo dataset](https://zenodo.org/records/23304444)**.
-Visit the record 
-To request access contact the record owner. GitHub access does not grant access to restricted files.
+Request access from the record owner through Zenodo. The six public scenes and
+the Outlook datasets in this repository are available without Zenodo access.
 
 
 ## Dataset record and citation
@@ -67,7 +68,7 @@ To request access contact the record owner. GitHub access does not grant access 
 - **Version-specific dataset DOI:** [10.5281/zenodo.23304444](https://doi.org/10.5281/zenodo.23304444).
 - **All-versions DOI:** [10.5281/zenodo.23304443](https://doi.org/10.5281/zenodo.23304443), which resolves to the latest dataset version.
 - **Full dataset:** 25 scenes, 25 individual NetCDF files, a Zarr archive, and a tiles archive; approximately 823.3 MB as listed in the record.
-- **This repository:** six public NetCDF scenes, 18:01–18:26 UTC, and runnable examples. The dataset DOI identifies the full Zenodo record, not a separately archived software release or a separate DOI for this subset.
+- **Oregon FireScore sample in this repository:** six public NetCDF scenes, 18:01–18:26 UTC, and runnable examples. The dataset DOI identifies the full Zenodo record; the Outlook datasets are documented separately above.
 
 For reproducible citation of this dataset version:
 
@@ -91,7 +92,7 @@ jupyter lab
 
 Open the notebooks in order:
 
-1. `notebooks/01_open_and_validate.ipynb`: inspect metadata and compare formats.
+1. `notebooks/01_open_and_validate.ipynb`: inspect metadata and variables, with an optional comparison for users who also have the Zarr dataset.
 2. `notebooks/02_false_rgb_and_maps.ipynb`: select a scene, generate RGB, and
    explore geographic FireScore/temperature panels and a zoomable HTML map.
 3. `notebooks/03_pixel_time_series.ipynb`: choose a location, find its native
@@ -120,8 +121,8 @@ set `FLARE_DATA_DIR` to its parent data folder and change `FORMAT` to `zarr` if 
 `I01`–`I05`, `BT04`, `BT05`, `lat`, `lon`, `FireScore`,
 `ObservationConfidence`, `AtmosphereState`, and scalar `time`.
 
-- I01–I05 and temperatures are reconstructed, not direct VIIRS measurements.
-- BT04 and BT05 are in kelvin. FireScore is an 0–100 score, not a probability.
+- I01–I05 and temperatures are FLARE physics-derived reconstructions.
+- BT04 and BT05 are in kelvin. FireScore is a 0–100 score, not a probability.
 - ObservationConfidence describes observation quality.
 - Floating NaN is unavailable. Valid score zero and categorical zero are retained.
 - Atmospheric codes: 0 unknown, 1 clear, 2 cloud, 3 smoke, 4 conflict, 5 unresolved.
