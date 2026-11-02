@@ -2,9 +2,9 @@
 
 ## FLARE FireOutlook: now through Day 7
 
-Explore [seven consecutive daily forecasts from one issuance](outlook/seven_day/README.md) with the new **FireOutlook2.0 notebook**. A bundled native-grid sample around Wheeler County, Oregon, contains all seven leads from the November 2, 2026 issuance, including geographic coordinates, valid periods, weather sources, categories, and quality flags. Day 1 uses HRRR, Day 2 combines HRRR and NBM, and Days 3-7 use NBM and remain experimental.
+Explore [how the forecast for July 15 changed](outlook/seven_day/README.md) with the **FireOutlook2.0 notebook**. Hold the target fixed on July 15, 2026, and follow seven evening updates issued **July 8-14 at 8 p.m. PDT**, from Day 7 to Day 1. Every update covers **July 15 at 5 a.m. through July 16 at 5 a.m. PDT**, matching the Wheeler County presentation.
 
-**[Start the seven-day notebook](outlook/notebooks/04_seven_day_outlook.ipynb)** to compare maps and inspect a location's forecast. The sample is a regional window, not the full western-domain seven-day archive.
+**[Start the seven-day notebook](outlook/notebooks/04_seven_day_outlook.ipynb)** for seven maps, an animation, county danger-area trends, and comparisons at Crosswhite, Red Rock, Twickenham, Camel Hump and Cove Creek. The bundled regional sample retains original forecast values and reference geography. This July version uses NBM for Days 7-2 and HRRR for Day 1; longer leads remain experimental.
 
 The original [FLARE Outlook v11 dataset](outlook/README.md) remains available: **19 separate Day-1 issuances for July 3-21, 2026**, with `outlook_index`, `category`, `lat`, and `lon` on the full native 5792 × 6672 western-domain grid. These historical files and the Oregon FireScore sample below are unchanged.
 

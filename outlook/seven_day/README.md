@@ -1,98 +1,102 @@
-# FLARE FireOutlook: seven daily forecasts
+# July 15 FireOutlook: seven evening updates
 
-Explore one issuance across seven consecutive 24-hour forecast windows. This
-package adds FireOutlook2.0 alongside the original July v11 Day-1 examples.
-Seven forecast leads from one issuance are different from seven forecasts
-issued on successive dates.
+**Keep the forecast target fixed on July 15, 2026, and follow the guidance from
+July 8 through July 14 at 8 p.m. PDT.** This is the sequence in the Wheeler County
+presentation, from Day 7 to Day 1.
 
-## Start here
+**[Open the executed notebook](../notebooks/04_seven_day_outlook.ipynb).** Install
+`outlook/requirements.txt` and run all cells to reproduce the maps, animation,
+county statistics, five fire-location comparisons, and CSV exports. The sample
+and reference geography are bundled; no separate download is needed.
 
-Open [the seven-day notebook](../notebooks/04_seven_day_outlook.ipynb) after
-installing [the notebook requirements](../requirements.txt). Run all cells from
-top to bottom. The bundled sample is included in Git, so no external drive,
-account, or separate forecast download is required.
+![Seven evening forecast updates for the fixed July 15 target](july15_forecast_progression.gif)
 
-The notebook checks the file checksum, displays each forecast's valid period,
-maps all seven leads, and exports a selected location's forecast to CSV. It
-uses the stored category values and decodes quality flags.
+The issue date advances from July 8 to July 14 PDT while the target stays July 15.
 
-## What is included?
+## Dates and leads
 
-- **Issuance:** November 2, 2026 at 03:00 UTC.
-- **Coverage:** a native-grid rectangular window around Wheeler County, Oregon.
-  This is a regional sample, not the full western-domain archive or a county mask.
-- **Valid periods:** Day 1 starts November 2 at 12:00 UTC; Day 7 ends November 9
-  at 12:00 UTC. Every lead covers 24 hours, using half-open [start, end) windows.
-- **Values:** original index, category, quality flags, and two-dimensional
-  latitude/longitude arrays. No interpolation, quantization, or resampling.
-- **Provenance:** issue signature, grid signature, algorithm version, exact source
-  grid window, and SHA-256 checksum in [manifest.json](manifest.json).
+Every forecast covers **July 15, 5 a.m. to July 16, 5 a.m. PDT**, or July 15
+12:00 to July 16 12:00 UTC. The end is exclusive.
 
-This sample illustrates the seven-day data format. It does not replace the July
-case-study data or establish forecast skill for the additional lead times.
+| Issued at 8 p.m. PDT | Issued at 03:00 UTC | Lead | Weather |
+| --- | --- | --- | --- |
+| July 8 | July 9 | Day 7 | NBM |
+| July 9 | July 10 | Day 6 | NBM |
+| July 10 | July 11 | Day 5 | NBM |
+| July 11 | July 12 | Day 4 | NBM |
+| July 12 | July 13 | Day 3 | NBM |
+| July 13 | July 14 | Day 2 | NBM |
+| July 14 | July 15 | Day 1 | HRRR |
 
-## Weather by forecast day
+The July 8 **UTC** issuance would need Day 8 to cover this target. The July 8
+**PDT evening** issuance is July 9 UTC and covers it at Day 7.
 
-| Lead | Weather source in this issuance |
-| --- | --- |
-| Day 1 | HRRR |
-| Day 2 | HRRR f36-f47 combined with NBM f48-f60 |
-| Days 3-7 | NBM; experimental longer leads |
+## Included data
 
-Vegetation, snow support, and the pre-issue proximity prior remain frozen at
-issuance. The longer leads represent changing forecast weather against that
-frozen state, rather than new satellite observations of future conditions.
-`weather_cycle` records the weather initialization, while `valid_start` and
-`valid_end` describe the forecast window. Consult the issuance metadata when
-using another algorithm version; the earlier base product used NBM on Day 2.
+`wheeler_target_20260715.nc` contains seven issue-time rows, each with its selected
+lead for the same target. Forecast fields have dimensions `issue_time, y, x`;
+`forecast_day[issue_time]` runs from 7 down to 1. This is a native-grid window
+containing Wheeler County, not the full western-domain archive.
 
-## Categories and missing data
+Original index, stored categories, quality flags, coordinates, pixel area,
+weather cycles and completion markers are retained. The exporter compares every
+exported array with its source, including NaNs. It performs no resampling.
+`manifest.json` records source issue signatures, grid window, and checksums.
 
-Codes 1-6 mean **Minimal, Low, Moderate, High, Very high, Extreme**. Code 0
-means **Unavailable**. A numerical index of zero can be valid; category zero is
-the unavailable marker. The index is an engineering indicator, not a calibrated
-probability of ignition or spread.
+The original July product is **FireOutlook2.0-hrrr1-nbm2to7-1**. Days 2-7 remain
+experimental. It uses NBM on Day 2; the later hybrid operational policy is a
+different version. Vegetation, snow support and the prior are frozen for each
+issuance, so each new row can incorporate new pre-issue inputs.
 
-Use `outlook_category` directly. This version's five category edges are stored
-in `category_edges`; the notebook displays their exact values. They differ from
-the rounded thresholds used in some earlier story displays. Do not reclassify
-this sample using those older thresholds.
+## Maps and comparisons
 
-Quality flags are bitwise and can coexist:
+Seven maps and an animation hold geography and target dates fixed. Reference
+origins and July 16-17 observed outlines show Crosswhite, Red Rock, Twickenham,
+Camel Hump and Cove Creek. These are observed reference geometries, not forecast
+fire boundaries. The notebook calculates the same nearest-pixel samples across
+all seven updates.
 
-| Bit | Meaning |
-| --- | --- |
-| 1 | Excluded land |
-| 2 | No paired vegetation donor |
-| 4 | Missing trend |
-| 8 | Missing weather |
-| 16 | Historical vegetation donor |
-| 32 | NIFC proximity prior applied |
-| 64 | Experimental longer lead |
+County High-or-above percentages use stored categories >=4, weighted by source
+geodesic pixel area. The denominator includes **all county pixel centers**, even
+unavailable ones. A center-in-polygon test approximates boundary coverage.
+This matches the presentation's method and measures forecast danger area, not
+burned area. The notebook also reports the scored percentage.
 
-Only read leads whose `complete` marker is true. The example reader rejects
-incomplete leads instead of displaying them as low danger. The stored pre-issue
-NIFC proximity prior is distinct from later incident observations used for
-evaluation; this sample makes no new retrospective performance claim.
+## Categories and quality
 
-## Reuse with another complete issuance
+Codes 1-6 are Minimal, Low, Moderate, High, Very high and Extreme. Code 0 is
+Unavailable. Use stored categories and the file's `category_edges`, not rounded
+thresholds from earlier story displays. An index value of zero can be valid.
+The index is an engineering indicator rather than a calibrated probability.
 
-For your own single-issuance Zarr, install `zarr>=2.18,<3` and open it with
-`xarray.open_zarr(path, consolidated=True, mask_and_scale=False, chunks=None)`.
-Use `validate`, `select_day`, and `schedule` from `examples/seven_day.py`.
-For a multi-issue archive, select one issue first and attach its correct issue
-metadata. The point helper and map function load spatial arrays, so subset a
-large domain before using them.
+Flags can coexist: 1 excluded land; 2 no paired vegetation donor; 4 missing trend;
+8 missing weather; 16 historical vegetation donor; 32 NIFC proximity prior
+applied; 64 experimental longer lead. Read only completed forecasts.
 
-The reproducible sample exporter is `examples/export_seven_day_sample.py`:
+This historical forecast replay illustrates changing guidance. It does not by
+itself establish predictive skill or forecast ignition and spread. The retained
+experiment audit verified pre-issue weather publication and vegetation times;
+historical prior receipt times were not fully verified. The reference fire
+records are used here for interpretation after forecast generation.
+
+## Reproducibility and sources
+
+The notebook is generated by `examples/build_seven_day_notebook.py`. Run tests
+from the repository root with:
 
 ```bash
-python examples/export_seven_day_sample.py YOUR_ISSUANCE.zarr seven_day/sample.nc
+python -m unittest discover -s outlook/examples -p test_seven_day.py
 ```
 
-It checks completion and valid windows, exports a native-grid window, compares
-every exported array value with the source, and writes a checksum manifest.
-Supply your own source issuance; the full operational archive is not bundled.
+To rebuild the sample from your own copy of the archive, install `zarr>=2.18,<3`
+and use `examples/export_seven_day_sample.py` with four arguments: archive path,
+county GeoJSON, original five NIFS reference records, and destination NetCDF.
+The full operational archive is not bundled. The exporter fixes the target and
+source grid window to this example and validates every selected lead.
+
+County boundary: US Census TIGERweb, BAS 2026; source URL retained in
+`references.geojson`. Origins and outlines: retained NIFC/WFIGS NIFS history,
+July 16-17, 2026; IRWIN identifiers and record timestamps are retained.
 
 Creator: **Manju Smriti**, BRIDGE - Research and Policy Foundation;
 ARTH GEO Intelligence. The repository's **CC BY-NC-ND 4.0** license applies.

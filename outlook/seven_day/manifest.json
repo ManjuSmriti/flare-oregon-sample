@@ -1,20 +1,30 @@
 {
-  "file": "wheeler_20261102.nc",
-  "sha256": "fee453eabd28cfae96f0c8247e31f4b8901590f03e731bb1a91b6e51a448c9da",
-  "bytes": 1308169,
-  "issue_time": "2026-11-02T03:00Z",
-  "algorithm_version": "FireOutlook2.0-hrrr1-hybrid2-nbm3to7-2",
-  "source_issue_signature": "9904d48e586f4d8de1f6c3759f6b76aecae251b70eec9380278716a008b419fd",
-  "source_grid_window_y0_y1_x0_x1": [
-    1203,
-    1396,
-    1850,
-    2198
-  ],
-  "sample_shape": {
-    "forecast_day": 7,
-    "y": 193,
-    "x": 348
+  "file": "wheeler_target_20260715.nc",
+  "sha256": "b37fd733dd18d60fa69834c18f9fd9ba2b5dacac165edcdc25f2fc296e78f3ba",
+  "references_sha256": "d345a6f1edf5267effee918253a4fd23a12788165cc6605a2419f5d5d34b302a",
+  "bytes": 10905722,
+  "product": "FireOutlook2.0-hrrr1-nbm2to7-1",
+  "issue_signatures": {
+    "2026-07-09T03:00": "4dec6a6294ef363e68a64e434edebb3af1441dc6e51639f3c4172f65c22a1526",
+    "2026-07-10T03:00": "de7ff984d6c5f3f32c0d5b4894872ae75840fe38490e1b95b3915cacf529a458",
+    "2026-07-11T03:00": "5c29ca2257b21b4e6cfc0e2f75d3ab57e1e73ccee91abf03c1f6b60611e81a26",
+    "2026-07-12T03:00": "33f56aeff6f6e5da34732d72ff0d25f2dd4f0a0d3c031ea5d1c1803ac13311d0",
+    "2026-07-13T03:00": "cf248d8ef0e9fc7f3ef7009854e809bc99a34cdc9a1a227590403e747bcfbd3f",
+    "2026-07-14T03:00": "cf8e285a847c3070e55090344d8a5100a680cb26eb1bdb1dc55867c4c0f9d20d",
+    "2026-07-15T03:00": "3d0f714b3d7275e81b3e6bc9a950eb462d99c3d589c22a250a9f3ede73e0194f"
   },
-  "verification": "All exported values equal source window, including NaN positions; no resampling"
+  "sample_shape": {
+    "issue_time": 7,
+    "y": 576,
+    "x": 816
+  },
+  "source_grid_window_y0_y1_x0_x1": [
+    1088,
+    1664,
+    1680,
+    2496
+  ],
+  "target_valid_start": "2026-07-15T12:00:00Z",
+  "target_valid_end": "2026-07-16T12:00:00Z",
+  "verification": "Every exported forecast, coordinate and area value equals its source window, including NaNs; no resampling"
 }

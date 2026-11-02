@@ -1,67 +1,96 @@
-"""Export a lossless native-grid window from one complete issuance."""
+"""Export seven issuances for July 15 from the original July FireOutlook archive."""
 import argparse
 import hashlib
 import json
 from pathlib import Path
 
 import numpy as np
+import pandas as pd
+import shapely
+from shapely.geometry import shape
 import xarray as xr
 
 from seven_day import validate
 
 
-def export(source, destination):
-    source = Path(source)
+def export(source, county_file, reference_file, destination):
     destination = Path(destination)
     ds = xr.open_zarr(source, consolidated=True, mask_and_scale=False, chunks=None)
-    validate(ds)
-    if not np.all(ds.complete.values):
-        raise ValueError('All seven leads must be complete before export')
-    # Find a native-grid rectangle around the county without interpolating pixels.
-    matches = []
-    for start in range(0, ds.sizes['y'], 512):
-        lat = ds.latitude.isel(y=slice(start, start + 512)).values
-        lon = ds.longitude.isel(y=slice(start, start + 512)).values
-        yy, xx = np.where((lat >= 44.5) & (lat <= 45.2) & (lon >= -120.6) & (lon <= -119.6))
-        if yy.size:
-            matches.append((start + yy.min(), start + yy.max(), xx.min(), xx.max()))
-    if not matches:
-        raise ValueError('Requested geographic region is absent')
-    window = [min(v[0] for v in matches), max(v[1] for v in matches) + 1,
-              min(v[2] for v in matches), max(v[3] for v in matches) + 1]
-    names = ['outlook_index', 'outlook_category', 'quality_flags', 'latitude',
-             'longitude', 'complete', 'valid_start', 'valid_end', 'weather_cycle', 'weather_model']
-    sample = ds[names].isel(y=slice(*window[:2]), x=slice(*window[2:])).load()
-    safe_keys = ['algorithm_version', 'category_edges', 'forecast_policy', 'grid_signature',
-                 'index_interpretation', 'issue_time', 'product_name', 'publication_rule',
-                 'quality_flag_meanings', 'source_issue_signature']
-    sample.attrs = {key: ds.attrs[key] for key in safe_keys}
-    sample.attrs['quality_flag_meanings'] = json.dumps(sample.attrs['quality_flag_meanings'])
-    sample.attrs['sample_scope'] = 'Native-grid rectangle around Wheeler County; not the full western domain'
-    sample.attrs['source_grid_window_y0_y1_x0_x1'] = window
-    sample.attrs['source_grid_shape'] = [ds.sizes['y'], ds.sizes['x']]
+    spatial = dict(y=slice(1088, 1664), x=slice(1680, 2496))
+    fields = ['outlook_index', 'outlook_category', 'quality_flags', 'complete',
+              'valid_start', 'valid_end', 'weather_cycle', 'weather_model']
+    rows, signatures = [], {}
+    for utc_day in range(9, 16):
+        issue = np.datetime64(f'2026-07-{utc_day:02}T03:00')
+        row = ds[fields].sel(issue_time=issue, forecast_day=16-utc_day).isel(**spatial).load()
+        if not bool(row.complete.item()):
+            raise ValueError('Incomplete source forecast')
+        row = row.expand_dims(issue_time=[issue])
+        row['forecast_day'] = ('issue_time', [16-utc_day])
+        rows.append(row)
+        minute = str(int(issue.astype('datetime64[m]').astype(int)))
+        signatures[str(issue)] = ds.attrs['issue_signatures'][minute]
+    sample = xr.concat(rows, dim='issue_time')
+    for name in ['latitude', 'longitude', 'pixel_area']:
+        sample[name] = ds[name].isel(**spatial).load()
+    county = json.loads(Path(county_file).read_text())
+    geometry = shape(county['features'][0]['geometry'])
+    sample['county_mask'] = (('y', 'x'), shapely.contains_xy(
+        geometry, sample.longitude.values, sample.latitude.values).astype('uint8'))
+    sample.attrs = {key: ds.attrs[key] for key in ['category_edges', 'forecast_policy',
+        'grid_signature', 'index_interpretation', 'product']}
+    sample.attrs.update({
+        'quality_flag_meanings': json.dumps(ds.attrs['quality_flag_meanings']),
+        'issue_signatures': json.dumps(signatures),
+        'sample_scope': 'Native-grid window containing Wheeler County, Oregon',
+        'source_grid_window_y0_y1_x0_x1': [1088, 1664, 1680, 2496],
+        'target_valid_start': '2026-07-15T12:00:00Z',
+        'target_valid_end': '2026-07-16T12:00:00Z',
+        'issuance_dates_local': 'July 8-14, 2026, 20:00 PDT',
+        'experiment_type': 'historical forecast replay',
+        'county_method': 'Pixel-center inclusion weighted by source pixel_area; denominator includes all county centers',
+    })
+    validate(sample)
     for name in sample.variables:
         sample[name].encoding = {}
         sample[name].attrs.pop('_FillValue', None)
     destination.parent.mkdir(parents=True, exist_ok=True)
-    encoding = {name: {'zlib': True, 'complevel': 6, '_FillValue': None}
-                for name in names if sample[name].ndim >= 2}
-    sample.to_netcdf(destination, engine='netcdf4', encoding=encoding)
-    with xr.open_dataset(destination, engine='netcdf4', mask_and_scale=False) as saved:
+    partial = destination.with_suffix('.partial.nc')
+    sample.to_netcdf(partial, engine='netcdf4', encoding={
+        name: {'zlib': True, 'complevel': 6, '_FillValue': None}
+        for name in sample.data_vars if sample[name].ndim >= 2})
+    with xr.open_dataset(partial, engine='netcdf4', mask_and_scale=False) as saved:
         validate(saved)
-        for name in names + ['forecast_day']:
+        for name in sample.variables:
             np.testing.assert_equal(saved[name].values, sample[name].values)
-    manifest = {
-        'file': destination.name,
-        'sha256': hashlib.sha256(destination.read_bytes()).hexdigest(),
-        'bytes': destination.stat().st_size,
-        'issue_time': sample.attrs['issue_time'],
-        'algorithm_version': sample.attrs['algorithm_version'],
-        'source_issue_signature': sample.attrs['source_issue_signature'],
-        'source_grid_window_y0_y1_x0_x1': [int(v) for v in window],
-        'sample_shape': dict(sample.sizes),
-        'verification': 'All exported values equal source window, including NaN positions; no resampling',
-    }
+    partial.replace(destination)
+    features = [dict(county['features'][0], properties={'name': 'Wheeler County', 'role': 'county'})]
+    names = ['Crosswhite', 'Red Rock', 'Twickenham', 'Camel Hump', 'Cove Creek']
+    colors = ['#3a66ff', '#c05cff', '#f349b5', '#00a5c0', '#9f8500']
+    raw = json.loads(Path(reference_file).read_text())
+    codes = ['000445', '000442', '000444', '000446', '000450']
+    for number, (name, color, code) in enumerate(zip(names, colors, codes), 1):
+        original = next(f for f in raw['features'] if f['properties']['attr_UniqueFireIdentifier'].endswith(code))
+        p = original['properties']
+        props = {'name': name, 'number': number, 'color': color,
+                 'source': p['poly_Source'], 'irwin_id': p['poly_IRWINID'],
+                 'record_current_utc': pd.to_datetime(p['poly_DateCurrent'], unit='ms', utc=True).isoformat(),
+                 'role': 'later observed reference perimeter'}
+        features.append({'type': 'Feature', 'properties': props, 'geometry': original['geometry']})
+        features.append({'type': 'Feature', 'properties': dict(props, role='reported origin'),
+                         'geometry': {'type': 'Point', 'coordinates': [p['attr_InitialLongitude'], p['attr_InitialLatitude']]}})
+    refs = destination.parent / 'references.geojson'
+    refs.write_text(json.dumps({'type': 'FeatureCollection', 'features': features,
+        'county_source': county.get('source'), 'county_vintage': county.get('vintage'),
+        'perimeter_source': 'NIFC/WFIGS retained NIFS history, July 16-17, 2026',
+        'purpose': 'Reference geography for interpretation, not forecast fire boundaries'}, separators=(',', ':')))
+    manifest = {'file': destination.name, 'sha256': hashlib.sha256(destination.read_bytes()).hexdigest(),
+        'references_sha256': hashlib.sha256(refs.read_bytes()).hexdigest(),
+        'bytes': destination.stat().st_size, 'product': ds.attrs['product'],
+        'issue_signatures': signatures, 'sample_shape': dict(sample.sizes),
+        'source_grid_window_y0_y1_x0_x1': [1088, 1664, 1680, 2496],
+        'target_valid_start': sample.attrs['target_valid_start'], 'target_valid_end': sample.attrs['target_valid_end'],
+        'verification': 'Every exported forecast, coordinate and area value equals its source window, including NaNs; no resampling'}
     (destination.parent / 'manifest.json').write_text(json.dumps(manifest, indent=2) + '\n')
     print(json.dumps(manifest, indent=2))
     ds.close()
@@ -69,7 +98,6 @@ def export(source, destination):
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument('source', help='Complete single-issuance Zarr')
-    parser.add_argument('destination', help='Output NetCDF path')
-    args = parser.parse_args()
-    export(args.source, args.destination)
+    for arg in ['source', 'county_file', 'reference_file', 'destination']:
+        parser.add_argument(arg)
+    export(**vars(parser.parse_args()))

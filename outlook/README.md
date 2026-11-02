@@ -3,14 +3,15 @@
 ## New: seven-day FireOutlook2.0
 
 The [seven-day guide](seven_day/README.md) and
-[notebook](notebooks/04_seven_day_outlook.ipynb) explore seven daily leads from
-one issuance. The bundled November 2, 2026 regional sample includes original
-native-grid values around Wheeler County, valid windows, weather sources,
-version-specific categories, quality flags, and a checksum manifest.
+[notebook](notebooks/04_seven_day_outlook.ipynb) hold **July 15, 2026** fixed and
+follow seven evening issuances, **July 8-14 at 8 p.m. PDT**, from Day 7 to Day 1.
+All forecasts cover July 15 at 5 a.m. through July 16 at 5 a.m. PDT. The bundled
+Wheeler County sample supports seven maps, animation, county statistics and
+five reported fire-location comparisons using original native-grid values.
 
 This complements the full-domain v11 Day-1 dataset below. The seven-day sample
-is a different product version and date; it does not extend the historical July
-files in place or change their values. Days 3-7 remain experimental.
+uses a different product version; it does not change the v11 values. This July
+archive uses NBM for Days 2-7 and HRRR for Day 1. Longer leads remain experimental.
 
 ## Original v11 daily forecasts
 
