@@ -1,0 +1,20 @@
+{
+  "file": "wheeler_20261102.nc",
+  "sha256": "fee453eabd28cfae96f0c8247e31f4b8901590f03e731bb1a91b6e51a448c9da",
+  "bytes": 1308169,
+  "issue_time": "2026-11-02T03:00Z",
+  "algorithm_version": "FireOutlook2.0-hrrr1-hybrid2-nbm3to7-2",
+  "source_issue_signature": "9904d48e586f4d8de1f6c3759f6b76aecae251b70eec9380278716a008b419fd",
+  "source_grid_window_y0_y1_x0_x1": [
+    1203,
+    1396,
+    1850,
+    2198
+  ],
+  "sample_shape": {
+    "forecast_day": 7,
+    "y": 193,
+    "x": 348
+  },
+  "verification": "All exported values equal source window, including NaN positions; no resampling"
+}

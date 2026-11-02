@@ -1,8 +1,12 @@
 # FLARE Oregon sample — FireScore v7.14
 
-## FLARE Outlook daily forecasts
+## FLARE FireOutlook: now through Day 7
 
-This repository contains [FLARE Outlook v11](outlook/README.md) for **July 15–19, 2026**, alongside the Oregon sample below. The Outlook package contains 5 full western-domain daily forecasts with `outlook_index`, `category`, `lat`, and `lon` on the native 5792 × 6672 grid.
+Explore [seven consecutive daily forecasts from one issuance](outlook/seven_day/README.md) with the new **FireOutlook2.0 notebook**. A bundled native-grid sample around Wheeler County, Oregon, contains all seven leads from the November 2, 2026 issuance, including geographic coordinates, valid periods, weather sources, categories, and quality flags. Day 1 uses HRRR, Day 2 combines HRRR and NBM, and Days 3-7 use NBM and remain experimental.
+
+**[Start the seven-day notebook](outlook/notebooks/04_seven_day_outlook.ipynb)** to compare maps and inspect a location's forecast. The sample is a regional window, not the full western-domain seven-day archive.
+
+The original [FLARE Outlook v11 dataset](outlook/README.md) remains available: **19 separate Day-1 issuances for July 3-21, 2026**, with `outlook_index`, `category`, `lat`, and `lon` on the full native 5792 × 6672 western-domain grid. These historical files and the Oregon FireScore sample below are unchanged.
 
 Preview the executed notebooks directly on GitHub:
 

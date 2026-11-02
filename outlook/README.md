@@ -1,4 +1,18 @@
-# FLARE Outlook v11 daily forecasts
+# FLARE FireOutlook examples
+
+## New: seven-day FireOutlook2.0
+
+The [seven-day guide](seven_day/README.md) and
+[notebook](notebooks/04_seven_day_outlook.ipynb) explore seven daily leads from
+one issuance. The bundled November 2, 2026 regional sample includes original
+native-grid values around Wheeler County, valid windows, weather sources,
+version-specific categories, quality flags, and a checksum manifest.
+
+This complements the full-domain v11 Day-1 dataset below. The seven-day sample
+is a different product version and date; it does not extend the historical July
+files in place or change their values. Days 3-7 remain experimental.
+
+## Original v11 daily forecasts
 
 Nineteen full western domain daily forecast files for July 3–21, 2026, prepared by **ManjuSmriti**. Each self-contained NetCDF includes the original Outlook index, category, latitude and longitude arrays. The native grid and numeric values are preserved without trimming, resampling or quantization.
 
@@ -36,7 +50,7 @@ On Windows, activate with `.venv\Scripts\activate` instead.
 2. [Geographic maps](notebooks/02_geographic_maps.ipynb) — plot Outlook index and category over country and state boundaries, then select a geographic region.
 3. [Daily point series](notebooks/03_daily_point_series.ipynb) — select latitude and longitude and compare all 19 daily forecasts at the nearest original grid pixel.
 
-Clone the parent repository and enter `outlook/` before running the setup commands. After the data upload is complete, save the daily NetCDF files in `outlook/data/`. You can inspect the saved outputs immediately without downloading data or running the notebooks.
+Clone the parent repository and enter `outlook/` before running the setup commands. The daily NetCDF files are included in `outlook/data/`. You can inspect the saved outputs immediately without running the notebooks.
 
 The notebooks use only the packaged NetCDF files and bundled public-domain map boundaries. No external drive or private source code is needed. Maps use true latitude/longitude axes. Display stride reduces rendering cost only; the files remain full resolution. There are no spectral bands in this package, so these notebooks map Outlook products rather than false-color RGB imagery.
 
@@ -46,7 +60,7 @@ Files are in `data/`, named `FLARE_Outlook_v11_YYYYMMDDT0300Z.nc`. `manifest.jso
 
 The 19 NetCDF files total **1,902,289,034 bytes (1.90 GB)**. Individual files range from **99.02 to 100.73 MB**, including the full latitude/longitude arrays in every file. Every daily file is below 100 MiB (104,857,600 bytes). Storage figures labelled MB and GB use decimal units.
 
-Each file includes its own coordinates and can be downloaded independently after publication. Daily binaries are excluded from Git history by `.gitignore`; they are prepared for separate GitHub Release assets. No live download URLs are included before publication.
+Each file includes its own coordinates and is tracked under `outlook/data/`, so it can also be downloaded independently from the repository. The existing ignore rules do not remove these already tracked files.
 
 Files use native NetCDF4 **zlib level 9**, byte shuffling and **512 × 512** chunks. They open directly with xarray; no ZIP extraction is needed. Compression is lossless and preserves all original numeric values and missing-value positions. Equivalent xarray write settings are:
 
